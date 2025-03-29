@@ -2,6 +2,7 @@
 title: ScopeBuddy
 authors:
   - "@HikariKnight"
+  - "@porkloin"
 tags:
   - Utility
 ---
@@ -33,6 +34,7 @@ XDG_DEFAULT_LAYOUT=no scb -w 1920 -h 1080 -W 2560 -H 1440 -- %command% --launche
 
 Now your Steam Overlay will work when using gamescope for a game in desktop mode! 🎉
 
+
 ## Configuration files
 
 ### Setting global defaults
@@ -56,6 +58,39 @@ This means we can now shorten our Launch Options for games we want to run in gam
 scb -- %command% --launcher-skip
 ```
 
+### Auto Resolution/HDR/VRR
+
+For users that routinely change resolutions or use game streaming via Sunshine/Moonlight or Steam Remote Play, your display properties may change frequently.
+
+On KDE desktops (Gnome support TBD), scopebuddy accepts configuration to automatically inject the width and height, HDR state, or VRR state of your primary display.
+
+Add the following variables to the following to the config file at `~/config/scopebuddy/scopebuddy.conf`:
+
+```bash
+SCB_AUTO_RES=1 # Overrides output height and width with current display
+SCB_AUTO_HDR=1 # Adds --enable-hdr if the current display has HDR enabled
+SCB_AUTO_VRR=1 # Adds --adaptive-sync if the current display has VRR enabled
+```
+If you have multiple displays (or a streaming "dummy plug"), these values will be detected from your primary display in KDE.
+
+Hard-coding a specific display in your `SCB_GAMESCOPE_ARGS` with `--prefer-output {your-device-here}` will make these automatic values detect from the preferred display.
+
+A full config example using SCB_AUTO_* vars might look like:
+
+```bash
+SCB_GAMESCOPE_ARGS="-f --mangoapp" # passes args for fullscreen + mangohud to gamescope
+SCB_AUTO_RES=1
+SCB_AUTO_HDR=1
+SCB_AUTO_VRR=1
+```
+
+This will result in the following gamescope command output when your KDE display is set to 2560x1440 with HDR and VRR on:  `gamescope -f --mangoapp -W 2560 -H 1440 --hdr-enabled --adaptive-sync`. 
+
+Later, if you switch your KDE display to 1920x1080 with HDR off and VRR on:  `gamescope -f --mangoapp -W 1920 -H 1080 --adaptive-sync`. 
+
+All without changing a single line in your Steam launch options or scopebuddy config!
+
+### Additional Config Files
 If you have a different set of defaults you use for a game, for example you want to upscale this game from 1080p to 1440p, then you can have a separate default config and tell scopebuddy to use that instead.
 For this example, make the file `1080p.conf` inside `~/.config/scopebuddy/` and add defaults specific to what you want to use for upscaling from 1080p.
 
