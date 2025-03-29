@@ -64,7 +64,7 @@ For users that routinely change resolutions or use game streaming via Sunshine/M
 
 On KDE desktops (Gnome support TBD), scopebuddy accepts configuration to automatically inject the width and height, HDR state, or VRR state of your primary display.
 
-Add the following variables to the following to the config file at `~/config/scopebuddy/scopebuddy.conf`:
+Add the following variables to the following to the config file at `~/config/scopebuddy/scb.conf`:
 
 ```bash
 SCB_AUTO_RES=1 # Overrides output height and width with current display
