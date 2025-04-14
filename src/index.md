@@ -86,8 +86,8 @@ hide:
 [install_pc_laptop]: General/Installation_Guide/Installing_Bazzite_for_Desktop_or_Laptop_Hardware.md
 [install_handheld]: General/Installation_Guide/Installing_Bazzite_for_Handheld_PCs.md
 [deck]:  Handheld_and_HTPC_edition/Handheld_Wiki/Steam_Deck.md
-[frame_13]: https://guides.frame.work/Guide/Bazzite+Installation+on+the+Framework+Laptop+13/405
-[frame_16]: https://guides.frame.work/Guide/Bazzite+Installation+on+the+Framework+Laptop+16/407
+[frame_13]: General/Installation_Guide/Installing_Bazzite_Framework_Laptop_13.md
+[frame_16]: General/Installation_Guide/Installing_Bazzite_for_Framework_Laptop_16.md
 [htpc]: General/Installation_Guide/Installing_Bazzite_for_HTPC_Setups.md
 [ally]: Handheld_and_HTPC_edition/Handheld_Wiki/ASUS_ROG_Ally.md
 [legion_go]: Handheld_and_HTPC_edition/Handheld_Wiki/Lenovo_Legion_Go.md
