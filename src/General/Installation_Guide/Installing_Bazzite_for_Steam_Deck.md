@@ -30,19 +30,18 @@ Bazzite functions properly on the Steam Deck LCD and Steam Deck OLED models.
 
 #### Installer Requirements
 
-- Stable internet connection with no bandwidth cap in place.
-- A USB flash drive with 10GB free space
-  - **Note**: All data on this drive will be wiped when flashed
-- Software to flash the image:
-  - [Ventoy](https://www.ventoy.net/en/index.html)
-    - Make sure to properly eject the drive after flashing the ISO to it
+!!! note
+
+    Bazzite requires a stable internet connection with no bandwidth cap in place.
+
+{% include 'installer_requirements.md' %}
 - Optional: Physical keyboard (without one, your username will be `bazzite` and the password will be `bazzite`)
 
 {% include 'desktop_envs.md' %}
 
 !!! warning
 
-    XHCI has to be set as the USB Mode for the Steam Deck for our ISO to boot! If it is set to DRD, please change it in your BIOS settings. 
+    XHCI has to be set as the USB Mode for the Steam Deck for our ISO to boot! If it is set to DRD, please change it in your BIOS settings.
     More information can be found [here](https://github.com/ublue-os/bazzite/issues/808#issuecomment-1963141866).
 
 <hr>

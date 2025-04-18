@@ -19,8 +19,8 @@ authors:
 
 ## Important Notes on Handheld Hardware
 
-!!! attention 
-    
+!!! attention
+
     Several handhelds require BitLocker to be unlocked (write down your recovery key too), Windows "Fast Startup" disabled, and **not** putting Windows into Hibernation Mode before installing Bazzite.
 
 
@@ -35,14 +35,10 @@ authors:
 #### Installer Requirements
 
 !!! note
-    
+
     Bazzite requires a stable internet connection with no bandwidth cap in place.
 
-- A USB flash drive with 10GB free space
-  - **Note**: All data on this drive will be wiped when flashed
-- Software to flash the image:
-  - [Fedora Media Writer](https://www.fedoraproject.org/en/workstation/download/), [Ventoy](https://www.ventoy.net/en/index.html), or [Rufus](https://rufus.ie/en/)
-    - Make sure to properly eject the drive after flashing the ISO to it
+{% include 'installer_requirements.md' %}
 - Optional: Physical keyboard (without one, your username will be `bazzite` and the password will be `bazzite`)
 
 #### Steam Gaming Mode Requirements
@@ -165,7 +161,7 @@ https://www.youtube.com/watch?v=wUDbMJtR1sM
 ## **Video Tutorial**
 
 !!! attention
-    
+
     We strongly recommend **manual partitioning + creating a separate EFI partition** for dual-booting, **not** automatic partitioning.  See instructions for manual partitioning [here](/General/Installation_Guide/dual_boot_setup_guide/#manual-partitioning-to-the-same-drive-for-dual-boot-setups). The separate EFI partition will help prevent Windows Updates from affecting your Bazzite installation later down the line.
 
 https://www.youtube.com/watch?v=pbxM_1ZJCCc

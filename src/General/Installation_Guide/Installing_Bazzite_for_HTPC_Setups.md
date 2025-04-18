@@ -28,7 +28,7 @@ authors:
 - **Storage**: 64GB free on an internal solid-state drive
 - **Network**: Stable internet connection with no bandwidth caps
 - **Additional Notes**: Certain drivers are **not** compatible with Bazzite
-  - For example: [A list of compatible USB Wi-Fi adapters](https://github.com/morrownr/USB-WiFi/blob/main/home/USB_WiFi_Adapters_that_are_supported_with_Linux_in-kernel_drivers.md) 
+  - For example: [A list of compatible USB Wi-Fi adapters](https://github.com/morrownr/USB-WiFi/blob/main/home/USB_WiFi_Adapters_that_are_supported_with_Linux_in-kernel_drivers.md)
 
 #### Steam Gaming Mode Requirements
 
@@ -39,11 +39,7 @@ authors:
 
 #### Installer Requirements
 
-- A USB flash drive with 10GB free space
-  - **Note**: All data on this drive will be wiped when flashed
-- Software to flash the image:
-  - [Fedora Media Writer](https://www.fedoraproject.org/en/workstation/download/), [Ventoy](https://www.ventoy.net/en/index.html), or [Rufus](https://rufus.ie/en/)
-    - Make sure to properly eject the drive after flashing the ISO to it
+{% include 'installer_requirements.md' %}
 - Physical keyboard
 
 {% include 'desktop_envs.md' %}
