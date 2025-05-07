@@ -52,7 +52,7 @@ Love Bazzite and want to help sustain it's development?  Consider **sponsoring**
 {{ contributor("Tulip Blossom", "tulilirockz", "OCI Image Virtuoso & Image Maintenance", "https://github.com/sponsors/tulilirockz") }}
 {{ contributor("Brian Ketelsen", "bketelsen", "Tooling Expert") }}
 {{ contributor("Pat Connors", "nicknamenamenick", "Documentation") }}
-{{ contributor("Zeglius", "Zeglius", "Scripting & Documentation Maintenance") }}
+{{ contributor("Zeglius", "Zeglius", "Scripting & Documentation Maintenance", "https://github.com/sponsors/Zeglius") }}
 {{ contributor("Aarron Lee", "aarron-lee", "Scripting & Command-Line Utilities") }}
 {{ contributor("Jan", "Jan200101", "Kernel Patches") }}
 {{ contributor("Matthew Schwartz", "matte-schwartz", "Steam Gaming Mode Testing & Consulting") }}
