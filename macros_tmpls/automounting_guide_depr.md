@@ -1,13 +1,10 @@
-!!! warning "Deprecation notice"
+!!! info
 
     {# TODO: Write section explaining partition labeling requirements and procedure #}
-    If you are using the latest version of Bazzite, this procedure is no longer needed. [`ublue-os-media-automount-udev`](https://github.com/ublue-os/packages/tree/main/packages/ublue-os-media-automount-udev) will handle automounting in non-removable devices.
+    [`ublue-os-media-automount-udev`](https://github.com/ublue-os/packages/tree/main/packages/ublue-os-media-automount-udev) will handle automounting given the partition follows these conditions:
 
-    Only **labeled** partitions with the **ext4** or **BTRFS** filesystem will be automounted.
-    
-    Partitions will be mounted under `/run/media/system/PARTITION_LABEL`.
-    You can place a custom named shortcut to the partition with:
+    - Uses BTRFS/ext4
+    - Has a label/name
 
-    ```sh
-    sudo ln -s /run/media/system/PARTITION_LABEL /mnt/CUSTOM_NAME
-    ```
+    In the case the partition doesnt get mounted automatically under these conditions, please follow the manual procedure,
+    using [KDE partition manager](/Advanced/KDE_Partition_Manager_Auto_Mount_Guide.md) or [GNOME Disks](/Advanced/GNOME_Disks_Auto-Mount_Guide.md)
