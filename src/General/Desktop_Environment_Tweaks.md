@@ -13,7 +13,11 @@ tags:
 
 KDE Plasma is the default Bazzite desktop environment and is highly customizable. One of the various customization that can be done is installing custom styles, cursors, and icons to your system with custom themes made by the community.
 
-Do **not** install themes with the built-in KDE system settings installer since it may not install properly because the filesystem is slightly different than most Linux operating systems. Install themes manually into your Home directory and follow instructions from the author if necessary.
+The downloading of themes through Discover has been disabled due to issues regarding the slow loading of search results, and compatibility issues with themes written for old versions of KDE. This may change in the future; in the mean time, you can try to install themes through the KDE system settings, or install them manually.
+
+!!! note
+
+    Themes installed through the System Settings are installed into `~/.local/share/plasma`; to uninstall them, you may need to manually delete the folders associated with the installed themes manually.
 
 ![Directory|401x207, 75%](../img/Directory.png)
 
