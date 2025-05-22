@@ -13,89 +13,27 @@ tags:
 <!--{"url_discourse": "https://universal-blue.discourse.group/docs?topic=970", "fetched_at": "2024-09-03 16:43:14.005694+00:00"}-->
 <!-- ANCHOR_END: METADATA -->
 
-{% include 'automounting_guide_depr.md' %}
-
----
-
-!!! warning 
-    
-    - You may lose data on the drive(s) or result in an unbootable system if configured improperly.
-    
-    - Do **not** use the NTFS, exFAT, or FAT32 filesystems for game library storage.
-
 !!! info "MicroSD cards automatically mount without any manual intervention required on Bazzite."
 
-Follow this guide **at your own discretion** and make sure to read the entire document relevant to your method, so you do not miss anything!
+## Setup an auto-mounting partition
 
-<hr>
+1. Open Gnome Disks, should have an icon like this. ![GNOME|50x50, 50%](../img/GNOME_Disks_icon.png)
 
-## Formatting a disk
+2. Wipe the partition you want to use, then use the leftover to create a new one.
 
-!!! warning 
+   ![](../img/automount.1.png)
 
-    This will wipe all existing data on it
+3. Give it a name and a filesystem.
 
-### Note when formatting in **KDE Partition Manager**
+!!! warning "We only support BTRFS/ext4 filesystems"
 
-Make sure you set permissions to **everyone**.
+![](../img/automount.2_btrfs.1.png){data-gallery="step-2"}
+![](../img/automount.2_btrfs.2.png){data-gallery="step-2"}
+![](../img/automount.3.png){data-gallery="step-2"}
 
-Use a disk graphical user interface like KDE Plasma or GNOME Disks to format your drive. We recommend formatting secondary drives to **BTRFS** or **Ext4**. BTRFS is our recommended filesystem, but Ext4 may be better for older spinning mechanical HDDs as secondary drives.
+Now reboot, your partition should be mounted automatically. Should appear under `/run/media/system/PARTITION_NAME`.
 
-### Creating a secondary drive directory and where to mount drives?
-
-!!! note
-    
-    Drive directories should be **lowercase** with **no spaces** for best practice.
-
-!!! attention 
-    
-    `/var/mnt` should NOT be the path, but create a new **directory** in either `/var/mnt` or `/var/run/media/`.
-
-- `/var/mnt/...` for **permanent** drives
-- `/var/run/media/...` for **removable** drives
-
-You can make a directory in `/var/mnt/` by opening a host terminal and **entering this command in a host terminal**:
-
-```command
-sudo mkdir /var/mnt/games
-```
-
-The drive will now be mounted in a directory known as `games`.
-
-!!! note
-     
-     The `games` directory can be named anything you desire that fits best practices.
-
-#### Permissions for the drive
-
-```command
-sudo chown $USER:$USER /var/mnt/games
-```
-
-!!! note
-    
-    If you plan to reformat the partition, remember to edit the mount point and "Remove" the mount path before you reformat! If not you will have to manually edit `/etc/fstab`.
-
-## Graphical User Interface (GUI) Methods for Auto-Mounting (**Recommended**)
-
-!!! warning 
-
-    Do not set up auto-mount, unmount then format a drive! It can confuse the software you are configuring drives with. Instead, **remove the auto-mount first before formatting the drive**.
-
-- [**KDE Partition Manager Guide**](./KDE_Partition_Manager_Auto_Mount_Guide.md)
-- [**GNOME Disks Guide**](./GNOME_Disks_Auto-Mount_Guide.md)
-
-## Alternative Methods (CLI)
-
-Other ways to setup automounting:
-
-1. [`media-automount-generator`](https://github.com/Zeglius/media-automount-generator).
-
-2. [`systemd.mount`](https://www.freedesktop.org/software/systemd/man/latest/systemd.mount.html) units.
-
-3. Editing the `/etc/fstab` file.
-
-Command Line Interface methods are intended for advanced users, and it is recommended to research one of the two methods outside of this documentation.
+![](../img/automount.4.png){data-gallery="step-3"}
 
 ## Emergency Mode After Mounting?
 
