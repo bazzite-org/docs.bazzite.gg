@@ -178,7 +178,7 @@ command+=" --launcher-skip --some-other-parameter"
 Every config file for scopebuddy is a full bash script that is sourced before running gamescope and the game. This means if you are an advanced user you can do some really creative stuff!
 !!! note
 
-    ScopeBuddy has `read-only` access when run through steam!
+    Steam will mess with the launch environment, some tools like `curl` will have incompatible libraries in the environment while `wget` will work fine. Test your scripts properly and have them write to a log for easy debugging using `2>&1 1>/tmp/myscript.log` at the end of it in the config to write the output to a log file during testing.
 
 Some handy variables available to you are
 
@@ -189,6 +189,46 @@ Some handy variables available to you are
 
 Let your creativity go wild!
 But please be responsible!
+
+### Script example for an ArcDPS updater for Guild Wars 2
+
+This is meant as inspiration for any ideas you might have?
+
+Make a config file for Guild Wars 2
+AppID/1284210.conf
+
+```bash
+# Guild Wars 2
+# Do not use gamescope for this title
+SCB_NOSCOPE=1
+# Use ArenaNet login instead of Steam
+command+=" -provider Portal"
+
+# Get the game directory from the expanded %command% variable from steam
+GAMEDIR=$(echo $command | awk -F '" "' '{ print $12 }' | sed 's/\/Gw2-64.exe//')
+# Run the arcdps updater script before game starts
+"$SCB_CONFIGDIR/scripts/dl-arcdps" "$GAMEDIR"
+```
+
+Then make the script file (remember to make it executable)
+scripts/dl-arcdps
+
+```bash
+#!/bin/bash
+# Get the directory passed to the script
+GW2_DIR=$1
+# Get the latest md5sum for arcdps
+NEWMD5SUM=$(wget -qO- https://www.deltaconnected.com/arcdps/x64/d3d11.dll.md5sum | awk '{print $1}')
+# Get installed arcdps md5sum
+MD5SUM=$(md5sum "$GW2_DIR/d3d11.dll" 2>/dev/null | awk '{print $1}')
+# If they do not match, ask to update arcdps
+if [ "$MD5SUM" != "$NEWMD5SUM" ]; then
+    if zenity --question --text="Update ArcDPS?\nNew MD5: $NEWMD5SUM\nOld MD5: $MD5SUM"; then
+        # Use wget to download arcdps as curl does not work in the steam environment
+        wget -O "$GW2_DIR/d3d11.dll" https://www.deltaconnected.com/arcdps/x64/d3d11.dll
+    fi
+fi
+```
 
 ## Video Overview
 
