@@ -139,7 +139,6 @@ The [Installing and Managing Applications documentation](../../Installing_and_Ma
 <hr>
 
 ## Video Tutorials
-<hr>
 
 ### Dual Boot Setup with Secure Boot Enabled
 
