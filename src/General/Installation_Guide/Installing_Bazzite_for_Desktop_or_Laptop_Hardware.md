@@ -136,6 +136,8 @@ The [Installing and Managing Applications documentation](../../Installing_and_Ma
 
 **Don't fall into the *apt* trap and learn how to properly install & manage applications in Bazzite.**
 
+<hr>
+
 ## Video Tutorials:
 
 ### Dual Boot Setup with Secure Boot Enabled
