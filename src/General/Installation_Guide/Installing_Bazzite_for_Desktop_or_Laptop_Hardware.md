@@ -111,27 +111,40 @@ Read more about this in the [Updates, Rollback, and Rebasing documentation](../.
 
 It is important to configure the system settings on a first boot to personalize your desktop especially if you notice the scaling is incorrect on first-boot.
 
-### Installing additional software
 
-The [Installing and Managing Applications documentation](../../Installing_and_Managing_Software/index.md) is useful to learn how to install additional software on Bazzite.
-
-### Calculating ISO SHA256 Checksum Hash
-
-https://www.youtube.com/watch?v=wUDbMJtR1sM
-
-## Ready to Game
-
-**You have now installed Bazzite!**
-
-View our [Gaming Guide](../../Gaming/index.md) for a quick rundown of Linux gaming, useful resources, and setting up Proton on Steam.
-
-Check out the additional [documentation](/index.md) surrounding the project.
 
 <hr>
 
-## **Video Tutorial - Dual Boot Setup w/ Secure Boot Enabled**:
+## Getting Started with Gaming on Bazzite
+
+**You have now installed Bazzite!**
+
+To get started with gaming, check out our [Gaming Guide](../../Gaming/index.md) which covers:
+
+- Installing and configuring **Steam** and **Proton** for Windows game compatibility
+- Setting up **Lutris** and other game launchers (Epic Games, GOG, Amazon Games)
+- Managing and modding games
+- Troubleshooting common gaming issues
+
+These guides will help make you ready for gaming on Bazzite.
+
+<hr>
+
+### Installing Additional Software
+
+The [Installing and Managing Applications documentation](../../Installing_and_Managing_Software/index.md) is useful to learn how to install additional software on Bazzite. 
+
+**Don't fall into the *apt* trap and learn how to properly install & manage applications in Bazzite.**
+
+## Video Tutorials:
+
+### Dual Boot Setup with Secure Boot Enabled
 
 https://www.youtube.com/watch?v=pbxM_1ZJCCc
+
+### How to Calculate ISO SHA256 Checksum
+
+https://www.youtube.com/watch?v=wUDbMJtR1sM
 
 <hr>
 
@@ -141,6 +154,8 @@ View the [Installation Troubleshoot Guide](./troubleshoot_guide.md).
 
 <hr>
 
-**See also:** [Upstream Manual Partitioning Guide](https://docs.fedoraproject.org/en-US/fedora-silverblue/installation/#manual-partition) & [Auto-Mounting Secondary Drives](../../Advanced/Auto-Mounting_Secondary_Drives.md)
+**See also:**  
+[Upstream Manual Partitioning Guide](https://docs.fedoraproject.org/en-US/fedora-silverblue/installation/#manual-partition) &  
+[Auto-Mounting Secondary Drives](../../Advanced/Auto-Mounting_Secondary_Drives.md)
 
 <-- [**View all Bazzite documentation**](../../index.md)
