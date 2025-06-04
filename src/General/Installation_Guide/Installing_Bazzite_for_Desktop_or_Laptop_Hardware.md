@@ -138,7 +138,8 @@ The [Installing and Managing Applications documentation](../../Installing_and_Ma
 
 <hr>
 
-## Video Tutorials:
+## Video Tutorials
+<hr>
 
 ### Dual Boot Setup with Secure Boot Enabled
 
@@ -157,7 +158,6 @@ View the [Installation Troubleshoot Guide](./troubleshoot_guide.md).
 <hr>
 
 **See also:**  
-[Upstream Manual Partitioning Guide](https://docs.fedoraproject.org/en-US/fedora-silverblue/installation/#manual-partition) &  
-[Auto-Mounting Secondary Drives](../../Advanced/Auto-Mounting_Secondary_Drives.md)
+[Upstream Manual Partitioning Guide](https://docs.fedoraproject.org/en-US/fedora-silverblue/installation/#manual-partition) &  [Auto-Mounting Secondary Drives](../../Advanced/Auto-Mounting_Secondary_Drives.md)
 
 <-- [**View all Bazzite documentation**](../../index.md)
