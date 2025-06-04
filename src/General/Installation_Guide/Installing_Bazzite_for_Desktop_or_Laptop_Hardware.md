@@ -140,13 +140,13 @@ The [Installing and Managing Applications documentation](../../Installing_and_Ma
 
 ## Video Tutorials
 
-### Dual Boot Setup with Secure Boot Enabled
-
-https://www.youtube.com/watch?v=pbxM_1ZJCCc
-
 ### How to Calculate ISO SHA256 Checksum
 
 https://www.youtube.com/watch?v=wUDbMJtR1sM
+
+### Dual Boot Setup with Secure Boot Enabled
+
+https://www.youtube.com/watch?v=pbxM_1ZJCCc
 
 <hr>
 
