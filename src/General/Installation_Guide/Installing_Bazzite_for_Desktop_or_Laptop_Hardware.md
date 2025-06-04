@@ -157,6 +157,6 @@ View the [Installation Troubleshoot Guide](./troubleshoot_guide.md).
 <hr>
 
 **See also:**  
-[Upstream Manual Partitioning Guide](https://docs.fedoraproject.org/en-US/fedora-silverblue/installation/#manual-partition) &  [Auto-Mounting Secondary Drives](../../Advanced/Auto-Mounting_Secondary_Drives.md)
+[Upstream Manual Partitioning Guide](https://docs.fedoraproject.org/en-US/fedora-silverblue/installation/#manual-partition) & [Auto-Mounting Secondary Drives](../../Advanced/Auto-Mounting_Secondary_Drives.md)
 
 <-- [**View all Bazzite documentation**](../../index.md)
