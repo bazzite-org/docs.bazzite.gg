@@ -37,7 +37,13 @@ sudo swapon /var/swap/swapfile
 
 ## Adding it to fstab
 
-Edit fstab with this **command**:
+Backup your fstab file with:
+
+```
+sudo cp  /etc/fstab.bak
+```
+
+Then, edit fstab with this **command**:
 
 ```
 sudo nano /etc/fstab
@@ -51,10 +57,27 @@ Then add the following **line of code** to fstab:
 
 `/var/swap/swapfile none swap defaults,nofail 0 0`
 
+In case of any error, you may restore from your backup with this:
+
+```
+sudo cp  /etc/fstab.bak /etc/fstab
+```
+
 ## Disable zram
+
 ```
 echo "" | sudo tee /etc/systemd/zram-generator.conf
 ```
 
 ## Reboot
 Reboot your device to apply the changes made above.
+
+## Reverting changes and restoring zram
+
+Should you want to restore the default, copy the zram-generator.conf from `/usr/etc/systemd/zram-generator.conf`:
+
+```
+sudo cp /usr/etc/systemd/zram-generator.conf /etc/systemd/zram-generator.conf
+```
+
+And then restore your original fstab file as shown above.
