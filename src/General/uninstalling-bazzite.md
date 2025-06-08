@@ -10,7 +10,7 @@ tags:
 
 ## Troubleshooting and Reporting Issues
 
-Chances are if you experience major issues with Bazzite then it is reporudicable for other with the exception of computer hardware is prone to issues on the Linux desktop.
+Chances are if you experience major issues with Bazzite then it is reproducible for other with the exception of computer hardware is prone to issues on the Linux desktop.
 
 ### Alternative Paths
 
