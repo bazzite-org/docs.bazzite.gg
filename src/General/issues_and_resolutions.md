@@ -34,15 +34,15 @@ flatpak override --user --socket=wayland com.discordapp.DiscordCanary
 
 Then run **Discord Canary** instead of regular Discord when you want to share your screen. Alternative Discord clients such as **Vesktop** are also a possible solution, but they do violate Discord's [terms of service](https://discord.com/terms#6). There are currently no known cases of users being banned for using client mods or alternative Discord clients, but this may change in the future.
 
-## ASUS ROG Ally joystick doesn't work in Desktop Mode
+## Gamepads and handheld joysticks don't work in Desktop Mode
 
-**Issue:** Neither of the ASUS ROG Ally's joysticks work in desktop mode, so you have to use the touchscreen or connect an external mouse.
+**Issue:** Gamepads and handheld device joysticks don't work in desktop mode, so you have to use the touchscreen or connect an external mouse.
 
-<h3>Resolution 1</h3>
+<h3>Resolution 1 (ASUS ROG Ally specific)</h3>
 
 Press and hold the **Armory Crate** button, it will vibrate twice and switch to mouse mode. The right joystick becomes a mouse, the shoulder buttons become left and right clicks, etc. Press and hold the **Armory Crate** button to switch back to controller mode (vibrates twice for controller mode).
 
-<h3>Resolution 2</h3>
+<h3>Resolution 2 (All gamepads and handhelds)</h3>
 
 Open up **Steam Settings >> Controller >> Non-Game Controller Layouts >> Desktop Layout**. Click on **Edit** Then **Enable Steam Input** and configure how the controller needs to as a keyboard and mouse in Desktop Mode. 
 
