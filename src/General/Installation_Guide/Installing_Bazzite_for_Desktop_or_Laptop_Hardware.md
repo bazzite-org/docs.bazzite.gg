@@ -41,6 +41,10 @@ authors:
 
 Read the [Dual Boot Guide](./dual_boot_setup_guide.md) **after** reading this guide before proceeding.
 
+!!! warning
+    **Warning for Dual Boot Users**: It is **highly recommended** to physically disconnect the storage drive that has Windows installed on it during the Bazzite installation process. This prevents accidental data loss or modification of your Windows installation.
+    You can reconnect the Windows drive after successfully installing Bazzite.
+
 ## Installation Guide
 
 > The part of the guide that requires the most effort.
@@ -132,7 +136,7 @@ These guides will help make you ready for gaming on Bazzite.
 
 ### Installing Additional Software
 
-The [Installing and Managing Applications documentation](../../Installing_and_Managing_Software/index.md) is useful to learn how to install additional software on Bazzite. 
+The [Installing and Managing Applications documentation](../../Installing_and_Managing_Software/index.md) is useful to learn how to install additional software on Bazzite.
 
 **Don't fall into the *apt* trap and learn how to properly install & manage applications in Bazzite.**
 
@@ -156,7 +160,7 @@ View the [Installation Troubleshoot Guide](./troubleshoot_guide.md).
 
 <hr>
 
-**See also:**  
+**See also:**
 [Upstream Manual Partitioning Guide](https://docs.fedoraproject.org/en-US/fedora-silverblue/installation/#manual-partition) & [Auto-Mounting Secondary Drives](../../Advanced/Auto-Mounting_Secondary_Drives.md)
 
 <-- [**View all Bazzite documentation**](../../index.md)
