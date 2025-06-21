@@ -108,7 +108,7 @@ These are just some of the common Bazzite ujust scripts, there are much more ava
 ### Configuration/Enabling Scripts
 
 - **ujust setup-waydroid** - a configuration helper for Waydroid. More information in [Waydroid Setup Guide](../Installing_and_Managing_Software/Waydroid_Setup_Guide.md)
-- **ujust setup-virtualization** - setup and configuure virtualization and vfio
+- **ujust setup-virtualization** - setup and configure virtualization and vfio
 - **ujust setup-sunshine** - toggle Sunshine Game Streaming host on or off
 - **ujust setup-luks-tpm-unlock** - enable auto LUKS unlock via TPM
 - **ujust setup-decky** - Install and configure Decky Loader
