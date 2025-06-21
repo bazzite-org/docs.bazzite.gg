@@ -98,7 +98,7 @@ Since Bazzite is a custom Fedora Atomic Desktop image, it makes use of read-only
 
 ### How is Fedora Atomic Desktop different than Fedora Workstation?
 
-If you're familiar with [Fedora Workstation](https://www.fedoraproject.org/workstation/) and [Fedora's Spins](https://www.fedoraproject.org/spins/), but not the Fedora Atomic Desktops paradigm then the major difference deals with obtaining a reproducable and consistent OS image, seperation between installing additional software and the system, and stability between system upgrades.
+If you're familiar with [Fedora Workstation](https://www.fedoraproject.org/workstation/) and [Fedora's Spins](https://www.fedoraproject.org/spins/), but not the Fedora Atomic Desktops paradigm then the major difference deals with obtaining a reproducable and consistent OS image, separation between installing additional software and the system, and stability between system upgrades.
 
 #### Installing Software
 
