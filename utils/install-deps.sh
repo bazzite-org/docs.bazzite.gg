@@ -7,7 +7,6 @@ function echod() { echo "[DEBUG]: $*"; }
 brew_installs=(
     uv
     just
-    prettier
     rg
 )
 
@@ -16,7 +15,7 @@ if ! command -v brew >/dev/null; then
     exit 1
 fi
 
-brew install ${brew_installs[@]}
+brew install "${brew_installs[@]}"
 
 # Install project
 echod "Setting up python project"
