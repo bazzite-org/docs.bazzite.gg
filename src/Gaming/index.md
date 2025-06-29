@@ -13,6 +13,7 @@ Linux gaming being a viable competitor to Windows is a relatively new paradigm. 
 ### - [**Game Launchers**](Game_Launchers.md)
 
 - [Setting Up Steam](/Gaming/Game_Launchers.md#steam-setup)
+- [Steam Launch Options & Shortcuts](/Gaming/Game_Launchers.md#steam-launch-options-and-shortcuts)
 - [Non-Steam Games](/Gaming/Game_Launchers.md#non-steam-games)
   - [Lutris](/Gaming/Game_Launchers.md#lutris)
   - [Epic Games, GOG, and Amazon Games](/Gaming/Game_Launchers.md#epic-games-gog-and-amazon-games-launcher)
