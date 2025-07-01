@@ -25,7 +25,7 @@ hide:
 
 - [:material-controller: **Playing Video Games**][gaming]{ style="font-size: 1.1rem" }
 
-  Bazzite comes bundled with :fontawesome-brands-steam: [Steam](https://store.steampowered.com)<sup>1</sup> and [Lutris](Gaming/Game_Launchers.md#lutris) to run all of your PC games<sup>2</sup> on multiple hardware configurations!
+  Bazzite comes bundled with :fontawesome-brands-steam: [Steam](https://store.steampowered.com) and [Lutris](Gaming/Game_Launchers.md#lutris) to run all of your PC games<sup>2</sup> on multiple hardware configurations!
 
   It is also compatible with other tools like:
 
@@ -33,8 +33,7 @@ hide:
   - [Games and emulators from the built-in app store](https://flathub.org/apps/category/Game/1) that range from [osu!](https://flathub.org/apps/sh.ppy.osu) to [Minecraft](https://flathub.org/apps/org.prismlauncher.PrismLauncher).
   - ...And [more][run_win_game]!
 
-  <small>\*<sup>1</sup> Desktop images require [**enabling Proton for all Windows Steam games**][enable_proton]</small>.
-   <small>\*<sup>2</sup> PC games that are known to work on the Linux desktop, visit [**ProtonDB**](https://protondb.com) and [**Are We Anti-Cheat Yet?**](https://areweanticheatyet.com) for more information</small>.
+  <small>\*<sup>1</sup> PC games that are known to work on the Linux desktop, visit [**ProtonDB**](https://protondb.com) and [**Are We Anti-Cheat Yet?**](https://areweanticheatyet.com) for more information</small>.
 
 - [:material-download-circle: **Installing Software**][installing_software]{ style="font-size: 1.1rem" }
 
