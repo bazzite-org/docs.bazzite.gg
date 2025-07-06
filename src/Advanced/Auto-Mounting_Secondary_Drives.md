@@ -35,6 +35,16 @@ Now reboot, your partition should be mounted automatically. Should appear under 
 
 ![](../img/automount.4.png){data-gallery="step-3"}
 
+## Manual mounting
+
+![GNOME_Edit_Mount_Options|690x465, 75%](../img/GNOME_Edit_Mount_Options.png)
+
+![GNOME_Mount_Options|549x500, 75%](../img/GNOME_Mount_Options_new.png)
+
+Append `,user,exec` at the end if doesnt work properly
+
+![](../img/GNOME_Mount_Options_new.2.png)
+
 ## Emergency Mode After Mounting?
 
 This video tutorial shows how to recover from your mounting mistakes.
