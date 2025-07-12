@@ -49,7 +49,7 @@ Sometimes a project's website or [Github repository](<https://github.com/flathub
 
 ### Project Website
 
-https://www.flatpak.org/
+https://flatpak.org/
 
 <hr>
 
