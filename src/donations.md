@@ -74,7 +74,7 @@ Love Bazzite and want to help sustain it's development?  Consider **sponsoring**
 {{ contributor("Kurt Himebauch", "xXJSONDeruloXx", "ujust Extraordinaire") }}
 {{ contributor("Atapi", "Sterophonick", "Driver Backports") }}
 {{ contributor("XYNY", "xynydev", "Infographics & Alternate Custom Tooling") }}
-{{ contributor("Crono", "EPOCHvoyager", "Minor Scripting, Pedantry Devotee") }}
+{{ contributor("Crono", "EPOCHvoyager", "Minor Scripting, Pedantry Devotee", "https://github.com/sponsors/EPOCHvoyager") }}
 {{ contributor("m2", "m2Giles", "Bug Fixes & Enhancements") }}
 {{ contributor("FiftyDinar", "fiftydinar", "Bug Fixes & Enhancements") }}
 {{ contributor("Marco Rodolfi", "RodoMa92", "Bug Fixes & Enhancements") }}
