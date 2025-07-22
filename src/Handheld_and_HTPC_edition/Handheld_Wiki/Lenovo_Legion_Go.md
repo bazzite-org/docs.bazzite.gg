@@ -39,11 +39,20 @@ Read the [tutorial](/Handheld_and_HTPC_edition/update-bios-lenovo-legion-go.md) 
 
 Read our [Secure Boot guide](/General/Installation_Guide/secure_boot.md#method-b-after-installation-method) to re-enroll the key after a BIOS update if you keep Secure Boot enabled, which is the default for this device.
 
-### Changing the resolution in Desktop Mode or connecting an external monitor has dire consequences!
+!!! info
 
-![grainy|690x387, 100%](../../img/grainy.jpeg)
+    As of July 2025, external monitors are working just fine. The external display can be set to its respective native resolution and refresh rate. 
 
-Try not to change the resolution in Desktop Mode!  Connecting to an external monitor may also cause issues.  If your screen doesn't display the correct output or looks grainy, noisy, or oddly colorful then you will have to **enter a [TTY session](/Handheld_and_HTPC_edition/quirks.md#tty-if-you-cannot-access-desktop-mode) and enter this command**:
+    ![legion-go-ext-display|690x387, 100%](../../img/legion_go_ext_display.jpeg)
+
+    Without additional fixes, the internal display only offers its native resolution with the correct aspect ratio. Other resolutions can be chosen, but most of the screen will remain empty.
+
+    ![legion-go-resolutions|690x387, 100%](../../img/legion_go_resolutions.png)
+    ![legion-go-int-display-alternative-resolution|690x387, 100%](../../img/legion_go_int_display_alternative_resolution.jpg)
+
+
+
+If your screen doesn't display the correct output or looks grainy, noisy, or oddly colorful then you will have to **enter a [TTY session](/Handheld_and_HTPC_edition/quirks.md#tty-if-you-cannot-access-desktop-mode) and enter this command**:
 
 ```
 rm ~/.config/kwin*
