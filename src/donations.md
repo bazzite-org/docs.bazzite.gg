@@ -44,7 +44,7 @@ title: Credits and Donating
 Love Bazzite and want to help sustain it's development?  Consider **sponsoring** the maintainers and contributors of the project.
 
 <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-{{ contributor("Kyle Gospodnetich", "KyleGospo", "Founder & Lead Maintainer", "https://github.com/sponsors/KyleGospo") }}
+{{ contributor("Kyle Gospodnetich", "KyleGospo", "Chronic Shit Disturber<br/><small>Founder & Lead Maintainer</small>", "https://github.com/sponsors/KyleGospo") }}
 {{ contributor("Antheas Kapenekakis", "antheas", "Bazzite Maintainer, Handheld Daemon creator", "https://github.com/sponsors/antheas") }}
 {{ contributor("HikariKnight", "HikariKnight", "Virtualization Support & Scripting", "https://github.com/sponsors/HikariKnight") }}
 {{ contributor("Noel Miller", "noelmiller", "Installer Enhancements & Custom Image Tooling", "https://github.com/sponsors/noelmiller") }}
