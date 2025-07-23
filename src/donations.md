@@ -45,7 +45,7 @@ Love Bazzite and want to help sustain it's development?  Consider **sponsoring**
 
 <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
 {{ contributor("Kyle Gospodnetich", "KyleGospo", "Founder & Lead Maintainer", "https://github.com/sponsors/KyleGospo") }}
-{{ contributor("Antheas Kapenekakis", "antheas", "Handheld Support", "https://github.com/sponsors/antheas") }}
+{{ contributor("Antheas Kapenekakis", "antheas", "Bazzite Maintainer, Handheld Daemon creator", "https://github.com/sponsors/antheas") }}
 {{ contributor("HikariKnight", "HikariKnight", "Virtualization Support & Scripting", "https://github.com/sponsors/HikariKnight") }}
 {{ contributor("Noel Miller", "noelmiller", "Installer Enhancements & Custom Image Tooling", "https://github.com/sponsors/noelmiller") }}
 {{ contributor("RJ Trujillo", "EyeCantCU", "Tooling for CI/CD Pipelines & Initial Alternate Desktop Environment Support") }}
