@@ -145,6 +145,7 @@ nav:
       - "Desktop Environment Tweaks": General/Desktop_Environment_Tweaks.md
       - "Community Resources": General/community-links.md
       - "Uninstalling Bazzite": General/uninstalling-bazzite.md
+      - "VPN Setup": General/VPN.md
       - "Repository Information (External)":
         - "README": https://github.com/ublue-os/bazzite/blob/main/README.md
         - "Security Policy": https://github.com/ublue-os/bazzite/blob/main/SECURITY.md
