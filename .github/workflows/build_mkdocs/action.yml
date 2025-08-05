@@ -86,6 +86,7 @@ runs:
       with:
         path: ${{ inputs.output_dir }}
         token: ${{ inputs.github_token }}
+        retention-days: 3
 
     - name: Deploy to GitHub Pages
       if: ${{ inputs.upload_github_page == 'true' }}
