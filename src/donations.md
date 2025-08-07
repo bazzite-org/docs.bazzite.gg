@@ -32,7 +32,17 @@ title: Credits and Donating
                 <span>{{ real_name }}</span>
             {% endif %}
             {% if sponsor %}
-                <small><a href="{{ sponsor }}">(Sponsor)</a></small>
+                <small>
+                  <a
+                    href="{{ sponsor }}"
+                    style="
+                      background-color: var(--md-primary-fg-color);
+                      color: var(--md-primary-bg-color);
+                      border: none;
+                      padding: 1px 3px;
+                      border-radius: 24px;"
+                  >Sponsor</a>
+                </small>
             {% endif %}
             <div><small>{{ description or "" }}</small></div>
         </div>
