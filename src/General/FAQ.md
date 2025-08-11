@@ -12,10 +12,10 @@ title: Frequently Asked Questions
 
 ## Who is Bazzite for?
 
-- Individuals who desire a desktop operating system designed for gaming with inspiration from SteamOS that has fairly low maintenance involved in comparison to other desktop Linux operating systems.
+- Individuals who desire a desktop operating system designed for gaming with inspiration from SteamOS that has fairly low maintenance in comparison to other desktop Linux operating systems.
 - Individuals who want a controller-friendly experience for couch PC gaming.
 - Individuals who own a [Handheld PC](../Handheld_and_HTPC_edition/Handheld_Wiki/index.md) and would prefer a SteamOS-like experience.
-- Individuals who own a Steam Deck and feel limited by SteamOS and/or also want desire newer system packages or alternate desktop enviornments.
+- Individuals who own a Steam Deck and feel limited by SteamOS and/or also desire newer system packages or alternate desktop enviornments.
 
 ## What is the difference between SteamOS and Bazzite?
 
