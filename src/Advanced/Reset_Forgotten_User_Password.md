@@ -56,8 +56,14 @@ Once you are in the GRUB command line:
 
     `/sbin/reboot -ff`
 
+
 ![Commands|690x334](../img/Reset_Password_Commands.png)
 
-Your user password should now be reset.
+6. Again, reach the GRUB boot menu
+7. Edit the GRUB prompt and append `autorelabel=1` to the line beginning with `linux`.
+Continue boot process with <kbd>Ctrl</kbd>+<kbd>X</kbd>
+8. You will see logs regarding SELinux relabeling files
+9. Once it is complete, your system is ready and your password has been successfully changed.
 
->Thanks to [Colin Walters](https://github.com/cgwalters) for the [solution](https://github.com/ublue-os/main/issues/469#issuecomment-1885264886).
+
+
