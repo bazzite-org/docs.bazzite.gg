@@ -66,16 +66,20 @@ Many users forget steps regarding SELinux because of habits. If you've made ever
 
 The good way to check if `/etc/shadow` is in bad SELinux configuration is to execute following command:
 
-    `ls -Z /etc/shadow` 
+  `ls -Z /etc/shadow` 
 
-![Commands|690x334](../img/Unlabeled_Etc_Shadow.png)
+![ls -Z /etc/shadow|690x334](../img/Unlabeled_Etc_Shadow.png)
 
+You should also notice *unlabeled_t* on your side.
+You now have to fix the label on `/etc/shadow`
 
-6. Again, reach the GRUB boot menu
-7. Edit the GRUB prompt and append `autorelabel=1` to the line beginning with `linux`.
-Continue boot process with <kbd>Ctrl</kbd>+<kbd>X</kbd>
-8. You will see logs regarding SELinux relabeling files
-9. Once it is complete, your system is ready and your password has been successfully changed.
+  `restorecon -v /etc/shadow`
+
+And then check result again with `ls -Z /etc/shadow`, which should lead to:
+
+  `system_u:object_r:shadow_t:s0   /etc/shadow`
+
+Now the system is ready and you can reboot with `/sbin/reboot -ff`.
 
 
 
