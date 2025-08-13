@@ -2,6 +2,7 @@
 authors:
   - "@nicknamenamenick"
   - "@noelmiller"
+  - "@gesnaud"
 tags:
   -  Troubleshooting
 ---
@@ -58,6 +59,17 @@ Once you are in the GRUB command line:
 
 
 ![Commands|690x334](../img/Reset_Password_Commands.png)
+
+## Not working?
+
+Many users forget steps regarding SELinux because of habits. If you've made everything but SELinux steps above, the file `/etc/shadow` will be unreadable or unreachable by any process.
+
+The good way to check if `/etc/shadow` is in bad SELinux configuration is to execute following command:
+
+    `ls -Z /etc/shadow` 
+
+![Commands|690x334](../img/Unlabeled_Etc_Shadow.png)
+
 
 6. Again, reach the GRUB boot menu
 7. Edit the GRUB prompt and append `autorelabel=1` to the line beginning with `linux`.
