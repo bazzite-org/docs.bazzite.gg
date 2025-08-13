@@ -60,6 +60,8 @@ Once you are in the GRUB command line:
 
 ![Commands|690x334](../img/Reset_Password_Commands.png)
 
+>Thanks to [Colin Walters](https://github.com/cgwalters) for the [solution](https://github.com/ublue-os/main/issues/469#issuecomment-1885264886).
+
 ## Not working?
 
 Many users forget steps regarding SELinux because of habits. If you've made everything but SELinux steps above, the file `/etc/shadow` will be unreadable or unreachable by any process.
@@ -71,7 +73,7 @@ The good way to check if `/etc/shadow` is in bad SELinux configuration is to exe
 ![ls -Z /etc/shadow|690x334](../img/Unlabeled_Etc_Shadow.png)
 
 You should also notice *unlabeled_t* on your side.
-You now have to fix the label on `/etc/shadow`
+You now have to fix the label on `/etc/shadow` with command below:
 
   `restorecon -v /etc/shadow`
 
