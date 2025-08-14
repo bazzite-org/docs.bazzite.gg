@@ -2,6 +2,7 @@
 authors:
   - "@nicknamenamenick"
   - "@noelmiller"
+  - "@gesnaud"
 tags:
   -  Troubleshooting
 ---
@@ -61,3 +62,27 @@ Once you are in the GRUB command line:
 Your user password should now be reset.
 
 >Thanks to [Colin Walters](https://github.com/cgwalters) for the [solution](https://github.com/ublue-os/main/issues/469#issuecomment-1885264886).
+
+## Not working?
+
+Many users forget steps regarding SELinux because of habits. If you've made everything but SELinux steps above, the file `/etc/shadow` will be unreadable or unreachable by any process.
+
+The good way to check if `/etc/shadow` is in bad SELinux configuration is to execute following command:
+
+  `ls -Z /etc/shadow` 
+
+![ls -Z /etc/shadow|690x334](../img/Unlabeled_Etc_Shadow.png)
+
+You should also notice *unlabeled_t* on your side.
+You now have to fix the label on `/etc/shadow` with command below:
+
+  `restorecon -v /etc/shadow`
+
+And then check result again with `ls -Z /etc/shadow`, which should lead to:
+
+  `system_u:object_r:shadow_t:s0   /etc/shadow`
+
+Now the system is ready and you can reboot with `/sbin/reboot -ff`.
+
+
+
