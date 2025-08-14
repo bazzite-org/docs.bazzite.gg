@@ -57,8 +57,9 @@ Once you are in the GRUB command line:
 
     `/sbin/reboot -ff`
 
-
 ![Commands|690x334](../img/Reset_Password_Commands.png)
+
+Your user password should now be reset.
 
 >Thanks to [Colin Walters](https://github.com/cgwalters) for the [solution](https://github.com/ublue-os/main/issues/469#issuecomment-1885264886).
 
