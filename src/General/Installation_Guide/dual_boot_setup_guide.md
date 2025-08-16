@@ -5,6 +5,7 @@ authors:
   - "@atimeofday"
   - "@damiankorcz"
   - "@aarron-lee"
+  - "@Zeglius"
 tags:
   - Installation
 ---
