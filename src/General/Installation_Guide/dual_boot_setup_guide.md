@@ -17,10 +17,15 @@ tags:
 
     Make sure to read the [**Installation Guide**](./index.md) for your device first before proceeding.
 
-1. Installing Bazzite with a shared EFI partition
-2. Installing Bazzite on a separate drive
+{#
+  TODO (@Zeglius): "Shared drive/EFI partition (Live ISO)" its unnecessarily verbose. The entire page in fact.
+                    We need to trim down this page by a lot.
+#}
 
-=== "Shared EFI partition (Live ISO)"
+1. Installing Bazzite with a shared drive.
+2. Installing Bazzite on a separate drive.
+
+=== "Shared drive/EFI partition"
 
     Resize the Windows partition to have enough space for Bazzite at the right side of the partition table.
     Then simply use the automatic partitioning option.
