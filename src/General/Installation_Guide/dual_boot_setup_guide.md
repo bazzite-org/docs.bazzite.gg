@@ -19,17 +19,18 @@ tags:
     Make sure to read the [**Installation Guide**](./index.md) for your device first before proceeding.
 
 {#
-  TODO (@Zeglius): "Shared drive/EFI partition (Live ISO)" its unnecessarily verbose. The entire page in fact.
-                    We need to trim down this page by a lot.
+TODO (@Zeglius): The dual booting methods section seems irrelevant, given its pretty straightforward.
+We might want to replace it with a mention of the Bootloader Restoration Tool and thats it.
 #}
 
 1. Installing Bazzite with a shared drive.
 2. Installing Bazzite on a separate drive.
 
-=== "Shared drive/EFI partition"
+=== "Shared drive"
 
-    Resize the Windows partition to have enough space for Bazzite at the right side of the partition table.
-    Then simply use the automatic partitioning option.
+    1. (In Windows) Resize the Windows partition with the Disk Management app to have enough space for Bazzite at the right side of the partition table.
+    2. Run the Bazzite installer with the automatic partitioning option.
+    3. Reboot into Bazzite and run `ujust regenerate-grub` in the terminal to add Windows to the GRUB.
 
 === "Separate Drive"
 
