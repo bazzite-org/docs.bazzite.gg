@@ -167,6 +167,14 @@ If its for Minecraft modding then install the [Prism Launcher](https://flathub.o
 
 **This also applies to other system-level packages that act as dependencies for other pieces of software or for development.**
 
+## I installed Windows, now cant boot Bazzite { id="windows-bootloader-override" }
+
+Flash the Bazzite Live ISO to a thumb drive, and run the **Bazzite Bootloader Restoration Tool**.
+
+## Windows updated and grub no longer shows up
+
+See [this](#windows-bootloader-override).
+
 ## Can I switch to a different desktop environment on my current installation?  
 
 <sub> (Example: Swapping from KDE Plasma to GNOME or vice-versa) </sub>
