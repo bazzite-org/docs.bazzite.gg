@@ -42,6 +42,8 @@ tags:
 
     You can also install Windows to an external drive with Windows-to-Go using [Rufus](https://rufus.ie/en/) to dual boot if you do not have an internal drive available.
 
+If you install Windows after Bazzite, you can restore Bazzite bootloader with the Bootloader Restoring Tool in the Live ISO.
+
 <hr/>
 
 ### Note about dual booting other Fedora Atomic Desktop images on the **same** drive:
