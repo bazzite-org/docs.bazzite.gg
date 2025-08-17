@@ -32,7 +32,17 @@ title: Credits and Donating
                 <span>{{ real_name }}</span>
             {% endif %}
             {% if sponsor %}
-                <small><a href="{{ sponsor }}">(Sponsor)</a></small>
+                <small>
+                  <a
+                    href="{{ sponsor }}"
+                    style="
+                      background-color: var(--md-primary-fg-color);
+                      color: var(--md-primary-bg-color);
+                      border: none;
+                      padding: 1px 3px;
+                      border-radius: 24px;"
+                  >Sponsor</a>
+                </small>
             {% endif %}
             <div><small>{{ description or "" }}</small></div>
         </div>
@@ -44,7 +54,7 @@ title: Credits and Donating
 Love Bazzite and want to help sustain it's development?  Consider **sponsoring** the maintainers and contributors of the project.
 
 <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-{{ contributor("Kyle Gospodnetich", "KyleGospo", "Founder & Lead Maintainer", "https://github.com/sponsors/KyleGospo") }}
+{{ contributor("Kyle Gospodnetich", "KyleGospo", "Chronic Shit Disturber<br/><small>Founder & Lead Maintainer</small>", "https://github.com/sponsors/KyleGospo") }}
 {{ contributor("Antheas Kapenekakis", "antheas", "Bazzite Maintainer, Handheld Daemon creator", "https://github.com/sponsors/antheas") }}
 {{ contributor("HikariKnight", "HikariKnight", "Virtualization Support & Scripting", "https://github.com/sponsors/HikariKnight") }}
 {{ contributor("Noel Miller", "noelmiller", "Installer Enhancements & Custom Image Tooling", "https://github.com/sponsors/noelmiller") }}
