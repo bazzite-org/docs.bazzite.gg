@@ -47,7 +47,7 @@ We might want to replace it with a mention of the Bootloader Restoration Tool an
 
     You can also install Windows to an external drive with Windows-to-Go using [Rufus](https://rufus.ie/en/) to dual boot if you do not have an internal drive available.
 
-If you install Windows after Bazzite, you can restore Bazzite bootloader with the Bootloader Restoring Tool in the Live ISO.
+If you install Windows after Bazzite, you can restore Bazzite bootloader with the **Bootloader Restoring Tool** in the Live ISO.
 
 <hr/>
 
