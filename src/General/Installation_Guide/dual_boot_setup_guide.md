@@ -5,6 +5,7 @@ authors:
   - "@atimeofday"
   - "@damiankorcz"
   - "@aarron-lee"
+  - "@Zeglius"
 tags:
   - Installation
 ---
@@ -14,93 +15,43 @@ tags:
 <!-- ANCHOR_END: METADATA -->
 
 !!! note
-    
+
     Make sure to read the [**Installation Guide**](./index.md) for your device first before proceeding.
 
-## Two Methods: Method _A_ or Method _B_
+{#
+TODO (@Zeglius): The dual booting methods section seems irrelevant, given its pretty straightforward.
+We might want to replace it with a mention of the Bootloader Restoration Tool and thats it.
+#}
 
-- **A)** Installing Bazzite on a separate drive (Recommended)
-- **B)** Manual partitioning on the same drive
+1. Installing Bazzite with a shared drive.
+2. Installing Bazzite on a separate drive.
 
-### **A**) _Separate_ Drive Method
+=== "Shared drive"
 
-**This method is ideal for desktops and HTPCs, and would be inconvenient for handhelds unless planned to keep stationary.**
+    1. (In Windows) Resize the Windows partition with the Disk Management app to have enough space for Bazzite.
+    Usually should look something like this:
+    ![](/img/dualbooting_partitions_windows.png)]
+    <i><small>Source: [diskpart.com](https://www.diskpart.com/windows-10/windows-10-disk-management-0528.html)</small></i>
+    2. Run the Bazzite installer with the automatic partitioning option.
+    3. Reboot into Bazzite and run `ujust regenerate-grub` in the terminal to add Windows to the GRUB.
 
-Install Bazzite on a separate internal or external drive.
+=== "Separate Drive"
 
-1. Install the other operating system on a drive (like Windows)
-2. Install Bazzite on a **second** drive
-3. Set Bazzite as the **default** in your boot order (optional)
+    **This method is ideal for desktops and HTPCs, and would be inconvenient for handhelds unless planned to keep stationary.**
 
-You can also install Windows to an external drive with Windows-to-Go using [Rufus](https://rufus.ie/en/) to dual boot if you do not have an internal drive available.
+    Install Bazzite on a separate internal or external drive.
 
-### **B**) _Same_ Drive Method
+    1. Install the other operating system on a drive (like Windows)
+    2. Install Bazzite on a **second** drive
+    3. Set Bazzite as the **default** in your boot order (optional)
 
-!!! important 
-    
-    This must be done **before installing Bazzite**.
+    You can also install Windows to an external drive with Windows-to-Go using [Rufus](https://rufus.ie/en/) to dual boot if you do not have an internal drive available.
 
-**This method is recommended for handheld PCs or mobile setups.**
+If you install Windows after Bazzite, you can restore Bazzite bootloader with the **Bootloader Restoring Tool** in the Live ISO.
 
-If you do not have multiple drives or are using a device that will **not** be stationary, then you will have to manually partition on the same drive.
+<hr/>
 
-#### Note about dual booting with **Windows** specifically:
-
-Dual booting Bazzite with Windows on the same drive works better with **Windows already installed before Bazzite**.
-
-#### Bazzite Partition
-
-Create space for Bazzite with the Disk Management application in Windows.
-
-<kbd>Win</kbd> + <kbd>R</kbd> to open Windows Run and enter:
-
-```
-diskmgmt.msc
-```
-
-Then, right-click your Windows partition and select "Shrink Volume" from the drop-down menu. Afterwards, select how much storage you want to allocate for Bazzite.
-
-!!! important
-    
-    It is **strongly recommended for to setup a separate EFI partition via manual partitioning**.  The separate EFI partition will help prevent Windows Updates from affecting your Bazzite installation later down the line.
-
-## Manual Partitioning to the Same Drive for Dual Boot Setups
-
-!!! warning "Bazzite only supports the BTRFS filesystem for `/`"
-
-If you need a tutorial video for manual partitioning, watch this [tutorial at timestamp 9:10](https://www.youtube.com/watch?v=JxPsKhJGTrs&t=550s).
-
-
-1.  Select Installation Destination
-2.  Select `Advanced Custom(Blivet-GUI)` under Storage Configuration.
-3.  Create partitions and devices:
-
-```
-    Manual Partitioning Scheme:
-
-    mount point: /boot/efi
-    format:      EFI system partition
-    size:        300MB
-
-    mount point: /boot
-    format:      ext4
-    size:        1GB
-
-    mount point:
-    format: btrfs
-    size: [max]
-
-    mount point: /
-    format:      btrfs (subvolume)
-
-    mount point: /var
-    format:      btrfs (subvolume)
-
-    mount point: /var/home
-    format:      btrfs (subvolume)
-```
-
-### Note about dual booting other Fedora Atomic Desktop images on the **same** drive: 
+### Note about dual booting other Fedora Atomic Desktop images on the **same** drive:
 
 If you want to dual boot another **Fedora Atomic Desktop image** (like [Bluefin](https://projectbluefin.io/)) installed alongside Bazzite, then you would have to make an additional EFI partition and switch between them through the BIOS boot menu.
 
@@ -131,7 +82,7 @@ ujust setup-boot-windows-steam
 ## Expanding storage size in a Windows dual-boot scenario
 
 !!! note
-    
+
     This is for future reference after dual-booting for a while.
 
 **Watch this video tutorial on how to expand the storage**:
