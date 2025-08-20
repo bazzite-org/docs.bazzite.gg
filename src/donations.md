@@ -68,7 +68,7 @@ Love Bazzite and want to help sustain it's development?  Consider **sponsoring**
 {{ contributor("Matthew Schwartz", "matte-schwartz", "Steam Gaming Mode Testing & Consulting") }}
 {{ contributor("Bouhaa", "BoukeHaarsma23", "Steam Gaming Mode Testing & Consulting") }}
 {{ contributor("Jason Nagin", "JasonN3", "Creator of Build Container Installer") }}
-{{ contributor("Adelia", "adeliasvg", "Branding Manager") }}
+{{ contributor("Amélia", "ameliasvg", "Branding Manager") }}
 {{ contributor("Sean Srock", "SuperRiderTH", "Animator") }}
 {{ contributor("wolfyreload", "wolfyreload", "Visual Guides") }}
 {{ contributor("Kurt Himebauch", "xXJSONDeruloXx", "ujust Extraordinaire") }}
