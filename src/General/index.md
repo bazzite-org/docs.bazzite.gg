@@ -10,6 +10,7 @@ title: General Documentation
 - [**Issues & Resolution**](/General/issues_and_resolutions.md)
 - [**Reporting Bugs**](/General/reporting_bugs.md)
 - [**Desktop Environment Tweaks**](/General/Desktop_Environment_Tweaks.md)
+- [**VPN Setup**](/General/VPN.md)
 - [**Community Resources**](/General/community-links.md)
 - [**Uninstalling Bazzite**](/General/uninstalling-bazzite.md)
 
