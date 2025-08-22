@@ -22,15 +22,31 @@ We recommend you the following options:
 This option may be good enough for you if you don't need special features provided by your VPN client, like kill-switches, split tunneling and other custom features not built-in to the VPN protocol.
 These VPNs can be toggled on and off at will.
 
-1. Open Systemsettings
-2. Navigate to the Networking Section and go into the "Wi-Fi & Internet" settings
-3. Click the "+" button at the bottom
+1\. Open Systemsettings
+2\. Navigate to the Networking Section and go into the "Wi-Fi & Internet" settings
+3\. Click the "+" button at the bottom
 
 <img src="/img/vpn_settings.png" alt="Settings page of Networking Settings" width="600" height="487" />
 
-4. Select your downloaded configuration file
+4\. Select your downloaded configuration file
 
 <img src="/img/add_vpn.png" alt="Import VPN config file dialog" width="400" height="617" />
+
+## Import VPN configuration files in GNOME
+
+This provides the easy way to import a VPN into GNOME if you don't need advanced features of your VPN.
+
+1\. Open Settings
+2\. Navigate to the Network section
+3\. Click the "+" button on the VPN section
+
+<img src="/img/vpn_settings_gnome.png" alt="Networking Settings page in GNOME" width="600" height="487" />
+
+4\. Choose "Import From file..."
+
+<img src="/img/add_vpn_file_gnome.png" alt="Import VPN config file dialog in GNOME" width="600" height="487" />
+
+5\. Select your downloaded configuration file.
 
 ## Using functional VPN Flatpaks
 
