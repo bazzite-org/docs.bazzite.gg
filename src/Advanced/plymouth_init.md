@@ -4,9 +4,8 @@ authors:
   - "@dkolb"
   - "@nicknamenamenick"
 tags:
-  -  Guide
+  - Guide
 ---
-
 
 See the init log show if services are functional when your device boots:
 
@@ -17,6 +16,7 @@ See the init log show if services are functional when your device boots:
 ```command
 sudo plymouth-set-default-theme details
 ```
+
 Alternatively, create `/etc/plymouth/plymouthd.conf` manually
 
 ### 2- Regenerate Initramfs & Reboot to Enable Theme Change
