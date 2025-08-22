@@ -45,6 +45,8 @@ We might want to replace it with a mention of the Bootloader Restoration Tool an
     2. Install Bazzite on a **second** drive
     3. Set Bazzite as the **default** in your boot order (optional)
 
+    If you install Windows second, you should disconnect the Bazzite drive to prevent using the Windows installer of using its EFI partition.
+
     You can also install Windows to an external drive with Windows-to-Go using [Rufus](https://rufus.ie/en/) to dual boot if you do not have an internal drive available.
 
 If you install Windows after Bazzite, you can restore Bazzite bootloader with the **Bootloader Restoring Tool** in the Live ISO.
