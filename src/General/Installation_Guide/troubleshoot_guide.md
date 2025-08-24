@@ -25,7 +25,9 @@ The "code 1" error is a generic error code that appears during installation when
 
 ## "Device is Active" Error
 
-**Watch this video for a workaround**:
+Delete your Windows bitlocker partition using another tool (such as gparted from a live distro) first and then retry installation.
+
+**Watch this video for a demonstation**:
 
 https://www.youtube.com/watch?v=FBGLLkIKp-w
 
