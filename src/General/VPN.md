@@ -1,5 +1,7 @@
 ---
 title: "VPN Setup"
+authors:
+  - "@tired-runner"
 ---
 
 VPNs are usually not offered on Flathub as the Flatpak sandbox is too strict for most VPN clients to work as is.
@@ -19,10 +21,9 @@ We recommend you the following options:
 
 ## Import VPN configuration files through GUI (desktop environment)
 
-=== "KDE Plasma"
+This option may be good enough for you if you don't need special features provided by your VPN client, like kill-switches, split tunneling and other custom features not built-in to the VPN protocol. VPNs imported in this way can be toggled on and off at will.
 
-    This option may be good enough for you if you don't need special features provided by your VPN client, like kill-switches, split tunneling and other custom features not built-in to the VPN protocol.
-    These VPNs can be toggled on and off at will.
+=== "KDE Plasma"
 
     1\. Open Systemsettings
     2\. Navigate to the Networking Section and go into the "Wi-Fi & Internet" settings
@@ -35,8 +36,6 @@ We recommend you the following options:
     <img src="/img/add_vpn.png" alt="Import VPN config file dialog" width="400" height="617" />
 
 === "GNOME"
-
-    This provides the easy way to import a VPN into GNOME if you don't need advanced features of your VPN.
 
     1\. Open Settings
     2\. Navigate to the Network section
