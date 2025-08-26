@@ -2,6 +2,7 @@
 title: "VPN Setup"
 authors:
   - "@tired-runner"
+  - "@zachriel"
 ---
 
 VPNs are usually not offered on Flathub as the Flatpak sandbox is too strict for most VPN clients to work as is.
