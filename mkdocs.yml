@@ -144,6 +144,7 @@ nav:
       - "Reporting Bugs": General/reporting_bugs.md
       - "Desktop Environment Tweaks": General/Desktop_Environment_Tweaks.md
       - "VPN Setup": General/VPN.md
+      - "ZeroTier Setup": General/zerotier.md
       - "Community Resources": General/community-links.md
       - "Uninstalling Bazzite": General/uninstalling-bazzite.md
       - "Repository Information (External)":
