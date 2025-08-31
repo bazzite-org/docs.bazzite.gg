@@ -100,6 +100,8 @@ ujust setup-decky
 
 You can access Decky Loader by pressing the 'side menu button', also known as the Quick Access Menu (QAM), once from within Steam Gamemode or Steam Big Picture Mode.
 
+The Quick Access Menu is accessible from the keyboard with Control + 2, or with an external controller using Xbox/PS button + A/X.
+
 ## Decky Plugins
 
 !!! attention
