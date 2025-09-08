@@ -124,17 +124,17 @@ nav:
   - index.md
   - FAQ: "General/FAQ.md"
   - Installation:
-         - "Setup Guide": General/Installation_Guide/index.md
-         - "Installing Bazzite for Desktop/Laptop Hardware": General/Installation_Guide/Installing_Bazzite_for_Desktop_or_Laptop_Hardware.md
-         - "Installing Bazzite for Framework Laptop 16": https://guides.frame.work/Guide/Bazzite+Installation+on+the+Framework+Laptop+16/407
-         - "Installing Bazzite for Framework Laptop 13": https://guides.frame.work/Guide/Bazzite+Installation+on+the+Framework+Laptop+13/405
-         - "Installing Bazzite for Home Theater PC (HTPC) Setups": General/Installation_Guide/Installing_Bazzite_for_HTPC_Setups.md
-         - "Installing Bazzite on the Steam Deck": General/Installation_Guide/Installing_Bazzite_for_Steam_Deck.md
-         - "Installing Bazzite on Handheld PCs": General/Installation_Guide/Installing_Bazzite_for_Handheld_PCs.md
-         - "Dual Boot Preliminary and Post-Installation Setup Guide": General/Installation_Guide/dual_boot_setup_guide.md
-         - "Secure Boot Instructions": General/Installation_Guide/secure_boot.md
-         - "Installation Troubleshoot Guide": General/Installation_Guide/troubleshoot_guide.md
-         - "Alternative Installation Method": General/Installation_Guide/alternate-install-guide.md
+      - "Setup Guide": General/Installation_Guide/index.md
+      - "Installing Bazzite for Desktop/Laptop Hardware": General/Installation_Guide/Installing_Bazzite_for_Desktop_or_Laptop_Hardware.md
+      - "Installing Bazzite for Framework Laptop 16": https://guides.frame.work/Guide/Bazzite+Installation+on+the+Framework+Laptop+16/407
+      - "Installing Bazzite for Framework Laptop 13": https://guides.frame.work/Guide/Bazzite+Installation+on+the+Framework+Laptop+13/405
+      - "Installing Bazzite for Home Theater PC (HTPC) Setups": General/Installation_Guide/Installing_Bazzite_for_HTPC_Setups.md
+      - "Installing Bazzite on the Steam Deck": General/Installation_Guide/Installing_Bazzite_for_Steam_Deck.md
+      - "Installing Bazzite on Handheld PCs": General/Installation_Guide/Installing_Bazzite_for_Handheld_PCs.md
+      - "Dual Boot Preliminary and Post-Installation Setup Guide": General/Installation_Guide/dual_boot_setup_guide.md
+      - "Secure Boot Instructions": General/Installation_Guide/secure_boot.md
+      - "Installation Troubleshoot Guide": General/Installation_Guide/troubleshoot_guide.md
+      - "Alternative Installation Method": General/Installation_Guide/alternate-install-guide.md
   - General:
       - "General Guides": General/index.md
       - "Dictionary and Terminology": General/terms.md
@@ -148,17 +148,17 @@ nav:
       - "Community Resources": General/community-links.md
       - "Uninstalling Bazzite": General/uninstalling-bazzite.md
       - "Repository Information (External)":
-        - "README": https://github.com/ublue-os/bazzite/blob/main/README.md
-        - "Security Policy": https://github.com/ublue-os/bazzite/blob/main/SECURITY.md
-        - "License": https://github.com/ublue-os/bazzite/blob/main/LICENSE
-        - "Bazzite-Specific Packages": https://github.com/orgs/bazzite-org/repositories
-        - "Press Kit": https://github.com/ublue-os/bazzite/tree/main/press_kit
+          - "README": https://github.com/ublue-os/bazzite/blob/main/README.md
+          - "Security Policy": https://github.com/ublue-os/bazzite/blob/main/SECURITY.md
+          - "License": https://github.com/ublue-os/bazzite/blob/main/LICENSE
+          - "Bazzite-Specific Packages": https://github.com/orgs/bazzite-org/repositories
+          - "Press Kit": https://github.com/ublue-os/bazzite/tree/main/press_kit
   - Gaming:
-          - "Gaming Guide": Gaming/index.md
-          - "Game Launchers": Gaming/Game_Launchers.md
-          - "Managing & Modding Games": Gaming/Managing_and_modding_games.md
-          - "Common Gaming Issues": Gaming/Common_gaming_issues.md
-          - "Hardware Compatibility for Gaming": Gaming/Hardware_compatibility_for_gaming.md
+      - "Gaming Guide": Gaming/index.md
+      - "Game Launchers": Gaming/Game_Launchers.md
+      - "Managing & Modding Games": Gaming/Managing_and_modding_games.md
+      - "Common Gaming Issues": Gaming/Common_gaming_issues.md
+      - "Hardware Compatibility for Gaming": Gaming/Hardware_compatibility_for_gaming.md
   - Bazzite-Deck:
       - "Steam Gaming Mode": Handheld_and_HTPC_edition/Steam_Gaming_Mode.md
       - "Quirks and Workarounds": Handheld_and_HTPC_edition/quirks.md
@@ -204,7 +204,7 @@ nav:
           - "Show Detailed Init Logs During Boot": Advanced/plymouth_init.md
           - "How to Modify Initramfs and Dracut": Advanced/dracut-and-initramfs.md
           - "Creating A Custom Bazzite Image": Advanced/creating_custom_image.md
-  - Development: 
+  - Development:
       - "Developer eXperience": Dev/index.md
   - Contribute: CONTRIBUTE.md
   - Social Platforms: Resources.md
