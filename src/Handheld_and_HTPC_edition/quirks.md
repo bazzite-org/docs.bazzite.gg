@@ -52,9 +52,9 @@ This issue happens usually with HDMI TV audio.  Go into Desktop Mode and into th
 
 ## Change physical keyboard layout for Steam Gaming Mode
 
-Steam Gaming Mode has no official way to change the physical keyboard layout and will always default to the US layout.  If you want to change the layout, then you can set the environment variable `XKB_DEFAULT_LAYOUT=no` replacing `no` with the correct layout for you. 
+Steam Gaming Mode has no official way to change the physical keyboard layout and will always default to the US layout.  If you want to change the layout, then you can set the environment variable `XKB_DEFAULT_LAYOUT=no` replacing `no` with the correct layout for you.
 Add this environment variable to `~/.config/environment.d/10-gamescope-session.conf` Basically, make sure hidden files is turned on and move into the **Home** directory, then go into the .config directory and enter the environment.d directory.  Inside that directory, the file that should be edited with a text editor should be saved as "10-gamescope-session.conf" for it to work properly.
- 
+
 <sub>(Please note, if both the "10-gamescope-session.conf" file and/or "environment.d" folder does not exist already, then create it.)</sub>
 
 This works in Desktop Mode including running Nested Gamescope and also works for Nested Desktop, but it has its own quirks: <kbd>altgr</kbd> + <kbd>2</kbd> to write "<kbd>@</kbd>" on the Norwegian layout will still not work, but the basic keyboard layout will always work.  The `altgr` key is luckily not needed for normal typing on the Norwegian layout, however <kbd>altgr</kbd> has been reported to work on the French layout, but your mileage may vary.
@@ -181,8 +181,8 @@ ujust fix-reset-steam
 
 Reboot the system.
 ### Alternative Method
-!!! attention 
-    
+!!! attention
+
     Try rebooting your device first before proceeding with the next steps! You may lose your games, saves, and other content if this is done incorrectly.
 
 1.  Open a TTY session with an **external physical keyboard** using this **keyboard combination and entering this command**:

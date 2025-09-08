@@ -14,7 +14,7 @@ tags:
 
 ![Shell Scripts (.sh)|96x96, 100%](../img/Shell_Scripts__sh.png)
 
-Technically `ujust` is **not** a package format, but are convenience commands that automate tasks using scripts which can be utilized to install specific software. There are also commands for system configuration and maintenance included here, so run `ujust` commands **at your own risk.**  If an application is available to install via a `ujust` command but can also be obtained as a [Flatpak](/Installing_and_Managing_Software/Flatpak/), then it is recommended to use `ujust` command over installing the Flatpak version on Bazzite.  
+Technically `ujust` is **not** a package format, but are convenience commands that automate tasks using scripts which can be utilized to install specific software. There are also commands for system configuration and maintenance included here, so run `ujust` commands **at your own risk.**  If an application is available to install via a `ujust` command but can also be obtained as a [Flatpak](/Installing_and_Managing_Software/Flatpak/), then it is recommended to use `ujust` command over installing the Flatpak version on Bazzite.
 
 ### Using `ujust`
 
@@ -41,7 +41,7 @@ ujust --choose
 This will show a terminal user interface of `ujust` commands that you can choose to execute with arrow keys or mouse input.
 
 !!! attention
-    
+
     Commands that require values or flags do not function with this method.
 
 ### Manually entering commands
@@ -83,7 +83,7 @@ Alternatively, you can find the `ujust` commands locally in:
 `/usr/share/ublue-os/just`
 
 !!! note
-    
+
     This directory also shows **hidden** `ujust` commands.
 
 ### Uninstalling applications installed through `ujust`

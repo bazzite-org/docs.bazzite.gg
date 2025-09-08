@@ -17,8 +17,8 @@ Steam can run Windows games on Linux. It utilizes a wide range of projects and p
 
 ### Forcing A Specific Proton / Steam Play Tool Version
 
-!!! warning 
-    
+!!! warning
+
     Games that use Denuvo Anti-Tamper DRM consider changing Proton versions as activiating the game on different hardware which may cause you to get locked out of the game if you change the Proton version more than 5 times within a 24 hour period.
 
 - Games with a Linux port will be used by default on Desktop images.
@@ -129,7 +129,7 @@ Right clicking a game on Lutris gives the option to add it as a non-Steam game (
 ### Game Pass and Microsoft Store Games (Xbox Cloud Gaming)
 
 !!! note
-    
+
     A Game Pass Ultimate subscription is required to use [Xbox Cloud Gaming](https://www.xbox.com/en-us/play) except for select games like Fortnite.
 
 Games installed from the Microsoft Store do **not** run unless you use a Xbox Cloud Gaming client like [**Greenlight**](https://github.com/unknownskl/greenlight). Fortnite can also be played via this method **without** a Game Pass subscription.  There are also [**select titles available on Battle.net**](https://us.support.blizzard.com/en/article/000357106) which can be ran through Proton using Lutris.

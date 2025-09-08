@@ -15,7 +15,7 @@ tags:
 ![Bazzite Rollback Helper Command|636x500](../../img/Bazzite_Rollback_Helper_Command.png)
 
 !!! important
-    
+
     Read the [rollback](./rolling_back_system_updates.md) and [rebasing](./rebase_guide.md) guides to understand what rebasing and rolling back on Bazzite entails.
 
 A command-line utility that assists with **rollbacks**, **rebasing**, and **outputs information on your current Bazzite image**.

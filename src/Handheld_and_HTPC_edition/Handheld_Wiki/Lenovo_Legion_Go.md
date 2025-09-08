@@ -41,7 +41,7 @@ Read our [Secure Boot guide](/General/Installation_Guide/secure_boot.md#method-b
 
 !!! info
 
-    As of July 2025, external monitors are working just fine. The external display can be set to its respective native resolution and refresh rate. 
+    As of July 2025, external monitors are working just fine. The external display can be set to its respective native resolution and refresh rate.
 
     ![legion-go-ext-display|690x387, 100%](../../img/legion_go_ext_display.jpeg)
 

@@ -34,7 +34,7 @@ sudo systemctl enable --now hhd@$(whoami)
 
 ### e-GPU Support:
 
-- e-GPU Thunderbolt 3/4 and USB4 enclosures over USB4 are supported. 
+- e-GPU Thunderbolt 3/4 and USB4 enclosures over USB4 are supported.
   - **AMD**:
     - Automatic switch at boot with [all-ways-egpu](https://github.com/ewagner12/all-ways-egpu/tree/main) works fine using method 2 and 3 at boot, unfortunately method 1 is not supported.
       - The script needs to be installed with [Steam Deck/User Installation](https://github.com/ewagner12/all-ways-egpu/blob/main/README.md#steamosbazziteuser-installation).

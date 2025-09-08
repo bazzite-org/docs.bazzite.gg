@@ -14,7 +14,7 @@ tags:
 ## What is Rebasing?
 
 !!! warning
-    
+
     Rebasing between different desktop environments (e.g. KDE Plasma to GNOME) **may cause issues** and is **unsupported**.
 
 Rebasing allows users to switch to a different image **without** having to reinstall and lose personal files and application data.
@@ -57,7 +57,7 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/bazzite-deck:sta
 For rebasing to the generic KDE Plasma version of the Handheld & HTPC image.
 
 !!! warning
-    
+
     Rebasing between different desktop environments (e.g. KDE Plasma to GNOME) **may cause issues** and is **unsupported**.
 
 ## How do I change the Bazzite's update branch? (Stable, Testing, and Unstable)
@@ -101,12 +101,12 @@ For the **testing** branch on the generic AMD/Intel Desktop image.
 
 ## Can I stay on a specific Fedora release?
 
-!!! warning 
-    
+!!! warning
+
     You will have to rebase back to `:stable` once you want to upgrade to the next Fedora version.
 
 !!! important
-    
+
     Switching to older Fedora versions will not bring new updates until you upgrade back to `:stable` and this also means **no security updates** for the time being.
 
 **Yes**, but only if that version of Fedora is still currently supported upstream.
@@ -116,7 +116,7 @@ For the **testing** branch on the generic AMD/Intel Desktop image.
 
 ## Rebasing to older builds
 
-!!! attention 
+!!! attention
 
     You will have to rebase back to `:stable` once you want to upgrade to the newest release.
 

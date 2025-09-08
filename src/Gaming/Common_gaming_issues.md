@@ -28,20 +28,20 @@ Some Linux ports may have missing functionality or worse performance than on the
 ## Valve & Source Engine Game Problems
 
 !!! note
-    
+
     This only applies to specific games running on the [Source engine](https://www.pcgamingwiki.com/wiki/Engine:Source).
 
 ### Audio & Custom Content Bugs
 
 !!! attention
-    
+
     Do **not** attempt to follow this workaround until you run into issues with audio or the specific scenario mentioned below regarding _Left 4 Dead 2_.
 
 Missing voice lines or custom content not loading in Source games? SELinux is blocking MP3 decoding and other middleware because it [executes heap memory](https://github.com/ValveSoftware/steam-for-linux/issues/43).
 
 This has also been confirmed to cause issues joining and hosting custom maps in _Left 4 Dead 2_.
 
-!!! warning 
+!!! warning
 
     Configuring SELinux is intended for advanced users and if used irresponsibly can break other components in your system and weaken the security of your device.
 

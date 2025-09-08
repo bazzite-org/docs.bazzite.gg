@@ -67,7 +67,7 @@ rpm-ostree install kvantum
 
 ## Wallpaper Engine Guide (<sub>_Only on KDE Images_</sub>)
 
-!!! note   
+!!! note
 
 
     Not all wallpapers are compatible and may even cause issues since most are not intended for use on the Linux desktop. See their [note](https://github.com/catsout/wallpaper-engine-kde-plugin/blob/main/README.md#note) on supported wallpaper type.

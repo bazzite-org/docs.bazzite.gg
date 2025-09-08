@@ -20,7 +20,7 @@ description: |
 ![AppImage|100x100, 100%](../img/AppImage.png)
 
 !!! note
-    
+
     AppImages may not be supported if rebasing to other Fedora Atomic Desktop images.
 
 AppImage is a universal package format that attempts to bundle every dependency that an application needs into one portable file. They can be installed by downloading any file with a `.AppImage` extension and then giving it executable permissions in the file's properties so the application can run properly. Like Windows executable files, they are usually found on the project's website to download.

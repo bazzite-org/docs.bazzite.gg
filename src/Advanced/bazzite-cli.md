@@ -18,7 +18,7 @@ tags:
 
 ```
 ujust bazzite-cli
-``` 
+```
 Bazzite's opt-in command line experience. `bazzite-cli` comes with some fantastic command line tools such as:
 - [**atuin**](https://github.com/atuinsh/atuin) for shell history
 - [**direnv**](https://direnv.net/) to load and unload environment variables depending on the current directory.

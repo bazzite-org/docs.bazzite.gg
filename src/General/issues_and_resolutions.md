@@ -46,7 +46,7 @@ Press and hold the **Armory Crate** button, it will vibrate twice and switch to 
 
 <h3>Resolution 2 (All gamepads and handhelds)</h3>
 
-Open up **Steam Settings >> Controller >> Non-Game Controller Layouts >> Desktop Layout**. Click on **Edit** Then **Enable Steam Input** and configure how the controller needs to as a keyboard and mouse in Desktop Mode. 
+Open up **Steam Settings >> Controller >> Non-Game Controller Layouts >> Desktop Layout**. Click on **Edit** Then **Enable Steam Input** and configure how the controller needs to as a keyboard and mouse in Desktop Mode.
 
 !!! Tip
 
@@ -86,7 +86,7 @@ If you are using Bazzite's KDE Plasma image, then you can skip the "Making Gnome
 
 **Cause:** Fast Startup is a feature of Windows that puts your computer into a hybrid state between shutdown and hibernation to speed up the time it takes for Windows to start up. However, this mode locks up hardware devices such as your wifi, ethernet and perhaps other hardware.
 
-**Resolution:**  One solution is to select the Restart option instead of the Shutdown option, which will perform a full power cycle. However, a better solution is to simply disable Fast Startup. 
+**Resolution:**  One solution is to select the Restart option instead of the Shutdown option, which will perform a full power cycle. However, a better solution is to simply disable Fast Startup.
 
 You can do this by:
 

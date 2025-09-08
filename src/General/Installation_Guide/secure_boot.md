@@ -14,7 +14,7 @@ tags:
 ## Secure Boot Notes and Gotchas
 
 !!! note
-    
+
     Skip this section if Secure Boot is not enabled or unsupported with your hardware.
 
 !!! important

@@ -20,7 +20,7 @@ tags:
 ![Google Play Store|650x500](../img/Google_Play_Store.jpeg)
 
 !!! attention
-    
+
     Waydroid does **not** work on Nvidia hardware.
 
 ## What is Waydroid?
@@ -132,7 +132,7 @@ Waydroid has an [issue](https://github.com/waydroid/waydroid/issues/135) where i
 Disable this functionality:
 
 !!! note
-    
+
     Waydroid must be running!
 
 In a host terminal, **run this command**:
@@ -148,7 +148,7 @@ If you ever want to undo this change, run the same steps but set `true` instead 
 Some applications do not expect mouse clicks and only respond to touchscreen taps.
 
 !!! note
-    
+
     Waydroid must be running!
 
 You can use this command in a host terminal to enable this per-application:
@@ -158,10 +158,10 @@ waydroid prop set persist.waydroid.fake_touch "PACKAGE_NAME_HERE"
 ```
 
 !!! note
-    
+
     Package names are usually in the format of "com.example.appname".
     You can find the package name for the application at the bottom of the "App info" page in the Settings app.
-    
+
     Wildcards are also supported, so "com.rovio.*" would apply to all games by Rovio.
 
     An example for the app "Fate/Grand Order" would be:
@@ -211,7 +211,7 @@ Then `Select GPU for Waydroid` which will give the option on what GPU to utilize
 ## Reset Waydroid
 
 !!! warning
-    
+
     You will lose all of your Waydroid data.
 
 If you experience issues or want a fresh Waydroid container, then select `Reset Waydroid` after **entering**:

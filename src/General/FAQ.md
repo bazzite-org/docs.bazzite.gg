@@ -32,15 +32,15 @@ Bazzite offers multiple images, but most images will be following _one of these 
 - **Variant 1**: Bazzite images that do **not** have Steam Gaming Mode and receive automatic updates daily that can be viewed as a Fedora Atomic Desktop with gaming packages pre-installed.
 - **Variant 2**: Bazzite images that automatically boot into Steam Gaming Mode (like SteamOS) and are intended for controller-oriented setups.
 
-### 1. Desktop Edition 
+### 1. Desktop Edition
 
 <sub>(**Variant 1**)</sub>
 
 **Steam Gaming Mode is not on these specific images!**
 
-Intended specifically for desktops and laptops with a focus on gaming which is influenced by SteamOS's Desktop Mode and the maintenance-free nature of ChromeOS. A gaming-focused Fedora Atomic Desktop (Kinoite/Silverblue) operating system.  Steam and other gaming utilities are part of the base operating system. System rollbacks available with a rock-solid stable Fedora Linux base. Most modern PC hardware should be compatible outside of specific drivers that do not work well on desktop Linux.  [Flathub](https://flathub.org/) is enabled out of the box, so all of the applications that you would find on SteamOS are available on Bazzite.  System and application updates are automatically downloaded in the background and applied on a restart by default. 
+Intended specifically for desktops and laptops with a focus on gaming which is influenced by SteamOS's Desktop Mode and the maintenance-free nature of ChromeOS. A gaming-focused Fedora Atomic Desktop (Kinoite/Silverblue) operating system.  Steam and other gaming utilities are part of the base operating system. System rollbacks available with a rock-solid stable Fedora Linux base. Most modern PC hardware should be compatible outside of specific drivers that do not work well on desktop Linux.  [Flathub](https://flathub.org/) is enabled out of the box, so all of the applications that you would find on SteamOS are available on Bazzite.  System and application updates are automatically downloaded in the background and applied on a restart by default.
 
-### [2. Bazzite-Deck Edition](../Handheld_and_HTPC_edition/Steam_Gaming_Mode.md) 
+### [2. Bazzite-Deck Edition](../Handheld_and_HTPC_edition/Steam_Gaming_Mode.md)
 
 <sub>(**Variant 2**)</sub>
 
@@ -108,13 +108,13 @@ There are **read-only root files** and an emphasis on installing applications as
 
 #### Updates
 
-Users can also rollback to a previous deployment if a system update breaks their workflow, or rebase entirely back to a stock Fedora Atomic image, [Aurora](https://getaurora.dev/), [Bluefin](https://projectbluefin.io/), or a [custom image by the community](https://universal-blue.discourse.group/t/list-of-community-created-custom-images/340). Do **not** rebase between different desktop environments. 
+Users can also rollback to a previous deployment if a system update breaks their workflow, or rebase entirely back to a stock Fedora Atomic image, [Aurora](https://getaurora.dev/), [Bluefin](https://projectbluefin.io/), or a [custom image by the community](https://universal-blue.discourse.group/t/list-of-community-created-custom-images/340). Do **not** rebase between different desktop environments.
 
 >**Read more about how [**updates, rolling back, and rebasing works on Bazzite**](../Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/index.md)**.
 
 ## Is this another fringe Linux distribution?
 
-Bazzite is **not** a Linux distribution in the traditional sense. Yes, it is a Linux operating system that is distributed for the public to use however it is a custom Fedora Atomic Desktop image with a recipe on top of it. Universal Blue images are a proof of concept of using containerized workflows with transactional and in-place operating system updates, and Bazzite exists by being gaming focused with inspiration from SteamOS.  Bazzite is a Fedora Atomic Desktop installation, but with the aid of Universal Blue's tooling, adds packages, services, drivers, etc. to the base image of it. Bazzite is using a new "**container-native**" approach that Fedora has been testing, and we are taking full advantage of it.  The team is utilizing the [Open Container Initiative (OCI)](https://opencontainers.org/about/overview/) to build the images, and are adding packages, services, and kernel modules to existing Fedora operating systems. 
+Bazzite is **not** a Linux distribution in the traditional sense. Yes, it is a Linux operating system that is distributed for the public to use however it is a custom Fedora Atomic Desktop image with a recipe on top of it. Universal Blue images are a proof of concept of using containerized workflows with transactional and in-place operating system updates, and Bazzite exists by being gaming focused with inspiration from SteamOS.  Bazzite is a Fedora Atomic Desktop installation, but with the aid of Universal Blue's tooling, adds packages, services, drivers, etc. to the base image of it. Bazzite is using a new "**container-native**" approach that Fedora has been testing, and we are taking full advantage of it.  The team is utilizing the [Open Container Initiative (OCI)](https://opencontainers.org/about/overview/) to build the images, and are adding packages, services, and kernel modules to existing Fedora operating systems.
 
 Unlike traditional Linux distributions, **most of the maintenance and security updates are done upstream** by Fedora and Universal Blue contributors while the primary Bazzite maintainers only have to focus on creating a great experience for an OS geared towards playing video games. Bazzite provides several images that all get the same additions and fixes through updates at the same time unless specified otherwise.  There can be a hypothetical scenario where everyone involved with Bazzite could stop maintaining the project at once and it will still continue to receive updates directly from upstream until the scheduled builds are broken.
 
@@ -133,7 +133,7 @@ Unlike traditional Linux distributions, **most of the maintenance and security u
 ## Is Secure Boot supported?
 
 !!! warning
-    
+
     The Steam Deck does not come with secure boot enabled and does not ship with any keys enrolled by default, so do not enable this on Steam Deck hardware unless you absolutely know what you're doing! (Steam Deck hardware only)
 
 **Yes**, but you will have to enroll our key.  More information on enrolling the key in our [Secure Boot guide](https://universal-blue.discourse.group/docs?topic=2742).
@@ -163,7 +163,7 @@ hostnamectl hostname <hostname>
 ```
 ## I need a different version of Java
 
-If its for Minecraft modding then install the [Prism Launcher](https://flathub.org/apps/org.prismlauncher.PrismLauncher) since this would not affect your host Java installation. If Java needs to be modified for development purposes then use [**Distrobox**](../Installing_and_Managing_Software/Distrobox.md). You will **not** be able to modify Java on your host at a system level.  
+If its for Minecraft modding then install the [Prism Launcher](https://flathub.org/apps/org.prismlauncher.PrismLauncher) since this would not affect your host Java installation. If Java needs to be modified for development purposes then use [**Distrobox**](../Installing_and_Managing_Software/Distrobox.md). You will **not** be able to modify Java on your host at a system level.
 
 **This also applies to other system-level packages that act as dependencies for other pieces of software or for development.**
 
@@ -175,7 +175,7 @@ Flash the Bazzite Live ISO to a thumb drive, and run the **Bazzite Bootloader Re
 
 See [this](#windows-bootloader-override).
 
-## Can I switch to a different desktop environment on my current installation?  
+## Can I switch to a different desktop environment on my current installation?
 
 <sub> (Example: Swapping from KDE Plasma to GNOME or vice-versa) </sub>
 
@@ -201,7 +201,7 @@ Deployments can also be pinned to rollback for future use, so `:2`, `:3`, etc. c
 ## I have questions or concerns that cannot be answered in the documentation
 
 !!! note
-    
+
     Search for the appropriate keywords in Bazzite's documentation first before proceeding with the next steps.
 
 Reach out to us on our [forums](https://universal-blue.discourse.group/c/bazzite/5), [Subreddit](https://www.reddit.com/r/Bazzite/) or [Discord](https://discord.gg/WEu6BdFEtp), but if it's an issue or bug you are encountering then we strongly urge you to [report it to the issue tracker](/General/reporting_bugs.md).  Keep in mind that certain areas and topics are out of our control especially when it comes to Nvidia driver problems, game compatibility, or other problems that plague the modern day Linux desktop regardless if you're running Bazzite or not.

@@ -13,7 +13,7 @@ Thanks for generating content about Bazzite and Universal Blue! This document wi
 - [Universal Blue](https://universal-blue.org/)
 
 ## Bazzite Terminology
-The name of the project is `Bazzite`. It is built with [Universal Blue](https://universal-blue.org), which publishes base images that Bazzite uses. These in turn are derived from Fedora’s Atomic Desktop images. Universal Blue is the parent organization of [Bluefin](https://projectbluefin.io), [Bazzite](https://bazzite.gg), [Aurora](https://getaurora.dev), and [uCore](https://github.com/ublue-os/ucore). It also acts as the GitHub organization. 
+The name of the project is `Bazzite`. It is built with [Universal Blue](https://universal-blue.org), which publishes base images that Bazzite uses. These in turn are derived from Fedora’s Atomic Desktop images. Universal Blue is the parent organization of [Bluefin](https://projectbluefin.io), [Bazzite](https://bazzite.gg), [Aurora](https://getaurora.dev), and [uCore](https://github.com/ublue-os/ucore). It also acts as the GitHub organization.
 
 ### Proper Usage
 - `Bazzite` - used to refer to the project and/or operating system

@@ -22,13 +22,13 @@ These handhelds do not have their own wiki page, yet.
 
 ### OneXPlayer
 - OneXPlayer X1 Mini
-- OneXPlayer F1 
-- OneXPlayer F1 EVA-01 
-- OneXPlayer F1L 
+- OneXPlayer F1
+- OneXPlayer F1 EVA-01
+- OneXPlayer F1L
 - OneXPlayer F1 OLED
-- OneXPlayer F1 Pro2 
-- OneXPlayer 2 APR23 
-- OneXPlayer 2 PRO APR23 
+- OneXPlayer F1 Pro2
+- OneXPlayer 2 APR23
+- OneXPlayer 2 PRO APR23
 - OneXPlayer 2 PRO APR23 EVA-01
 - OneXPlayer Mini A07
 - OneXPlayer ONE XPLAYER
@@ -48,7 +48,7 @@ These handhelds do not have their own wiki page, yet.
 ## Unsupported Handhelds
 
 !!! note
-    
+
     Certain handhelds have been confirmed to boot Bazzite, but are plagued by missing driver support for Linux including missing audio drivers.
 
 Unsupported handhelds _could work_ with Bazzite, but there may be major issues encountered that are undocumented. If your handheld hardware is not listed, then you can still give Bazzite a try with our Bazzite-Deck image.

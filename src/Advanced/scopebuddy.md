@@ -84,9 +84,9 @@ SCB_AUTO_HDR=1
 SCB_AUTO_VRR=1
 ```
 
-This will result in the following gamescope command output when your KDE display is set to 2560x1440 with HDR and VRR on:  `gamescope -f --mangoapp -W 2560 -H 1440 --hdr-enabled --adaptive-sync`. 
+This will result in the following gamescope command output when your KDE display is set to 2560x1440 with HDR and VRR on:  `gamescope -f --mangoapp -W 2560 -H 1440 --hdr-enabled --adaptive-sync`.
 
-Later, if you switch your KDE display to 1920x1080 with HDR off and VRR on:  `gamescope -f --mangoapp -W 1920 -H 1080 --adaptive-sync`. 
+Later, if you switch your KDE display to 1920x1080 with HDR off and VRR on:  `gamescope -f --mangoapp -W 1920 -H 1080 --adaptive-sync`.
 
 All without changing a single line in your Steam launch options or scopebuddy config!
 

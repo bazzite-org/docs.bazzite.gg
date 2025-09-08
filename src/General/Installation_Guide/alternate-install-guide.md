@@ -1,12 +1,12 @@
 ---
 title: Alternative Installation Guide
-authors: 
+authors:
   - "@nicknamenamenick"
 tags:
   - Installation
 ---
 
-!!! warning 
+!!! warning
 
     This method may have scaling issues with the installer depending on the hardware especially if it is a handheld PC.
 

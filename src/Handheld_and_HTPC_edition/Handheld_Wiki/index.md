@@ -13,7 +13,7 @@ authors:
 
 ## Handheld Compatibility
 
-!!! attention 
+!!! attention
 
     This list is incomplete and does not indicate that unlisted handhelds do not work with Bazzite currently, but because we lack specific information regarding their post-installation setup, workarounds, and proper hardware support for Linux, they are unlisted here.
 
@@ -36,7 +36,7 @@ Feel free to add new entries or update current wiki pages for your handheld foll
 ## HHD Setup
 
 !!! attention
-    
+
     HHD is intended and functional for handhelds that are **not** the Steam Deck.
 
 >Read the [**HHD README**](https://github.com/hhd-dev/hhd/blob/master/readme.md) for more information.
@@ -46,7 +46,7 @@ Feel free to add new entries or update current wiki pages for your handheld foll
 2. Select the controller emulation and RGB color you want
 
 !!! note
-    
+
     Gyro functionality **requires** DualSense emulation
 
  ## TDP Controls
@@ -89,7 +89,7 @@ Desktop controller layout may not exist by default if Steam doesn't setup your h
 ![desktop_controls_step_3|690x431, 75%](../../img/handheld_desktop_controls_3.jpeg)
 
 Make sure to **apply** the desktop controls when you select them.
-   
+
 ## Decky Setup
 
 To install [Decky Loader](https://decky.xyz), open a host terminal and enter:
@@ -105,7 +105,7 @@ The Quick Access Menu is accessible from the keyboard with Control + 2, or with 
 ## Decky Plugins
 
 !!! attention
-    
+
     Decky may break or uninstall after updates especially if the Steam client or Gamescope is updated.
 
 Install optional [Decky plugins](https://plugins.deckbrew.xyz/) for your handheld. If you experience any major issues then it is recommended to uninstall Decky before reporting Bazzite bugs.

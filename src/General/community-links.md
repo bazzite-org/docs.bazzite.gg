@@ -31,7 +31,7 @@ tags:
 - [**StreamingServiceLauncher**](https://github.com/aarron-lee/StreamingServiceLauncher)
 - [**Crunchyroll for Linux**](https://github.com/aarron-lee/crunchyroll-linux)
 - [**Running Valve's Hammer Level Editor Software for Map Making in the Source 1 Engine**](https://andrealmeid.com/post/2020-05-28-csgo-hammer-linux/)
-- [**boxkit: Template to build your own OCI Distrobox container**](https://github.com/ublue-os/boxkit) 
+- [**boxkit: Template to build your own OCI Distrobox container**](https://github.com/ublue-os/boxkit)
 - [**bazzite-arch: Gaming packages inside of a Distrobox container**](https://github.com/ublue-os/bazzite-arch)
 - [**DAWbox: An Ubuntu based OCI ready for music production, powered by Distrobox**](https://github.com/Messaiga/DAWbox)
 

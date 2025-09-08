@@ -15,8 +15,8 @@ title: Steam Gaming Mode Images
 <sub>Please note that Steam Gaming Mode has demanding GPU hardware requirements.</sub>
 
 ### What is Steam Gaming Mode?
-!!! important 
-    
+!!! important
+
     The Steam beta client is **not** supported, please revert to the stable client before reporting issues.
 
 https://www.youtube.com/watch?v=zXK1CXUyzXQ
@@ -47,7 +47,7 @@ A [ community guide](https://steamcommunity.com/sharedfiles/filedetails/?id=2804
 ### Valve's Official SteamOS Guide
 
 !!! important
-    
+
     Not all of the information will be accurate in regards to Bazzite-Deck images.
 
 Valve wrote a [guide](https://help.steampowered.com/en/faqs/view/7DD4-C618-182E-0E49) for the Steam Deck which may have some relevant information in regards to Bazzite.

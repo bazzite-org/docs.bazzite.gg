@@ -54,7 +54,7 @@ These directories and files all start with a `.` before it
 It's the glue that holds everything together when you run a game through Proton and also is responsible for containing any of the files the game would drop outside of the installation folder.
 
 !!! important
-    
+
     This installation folder for **Steam games** is usually in: `.../steamapps/common/<game>`
 
 ### Equivalent Windows Folders
@@ -94,7 +94,7 @@ Steam Workshop is the most straightforward method to obtain mods, but is not sup
 Replace files and directories is still supported in both the game directory and prefix, but there may be some extra steps involved.  Some mods require a "WINE DLL OVERRIDE" environment variable in the Steam launch options.  For non-Steam Games, use Lutris to open "Wine Configuration" and select the "Libraries" tab to add new overrides.
 
 !!! example
-    
+
     **DirectInput8 DLL Override**: `WINEDLLOVERRIDES="dinput8=n,b" %command%`
 
 ## Enhancements Pre-Installed on Bazzite

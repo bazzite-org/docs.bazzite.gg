@@ -35,7 +35,7 @@ Bazzite updates all of the changes made specifically in Bazzite itself, updates 
 ## How do I update manually on Desktop images?
 
 !!! note
-    
+
     This manual method also works in Desktop Mode on Bazzite-Deck images in Desktop Mode.
 
 - You can force an update with the System Update tool at your own convenience.

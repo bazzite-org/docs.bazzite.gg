@@ -9,7 +9,7 @@ title: Contributing to Bazzite
 # Contributing to Bazzite
 
 !!! attention
-    
+
     Please read [**Universal Blue's General Contributing Guidelines**](https://universal-blue.org/contributing.html) before proceeding!
 
 ## Good Contribution Examples
@@ -24,9 +24,9 @@ title: Contributing to Bazzite
 
 ## Building Your Own Bazzite for Testing
 
-If you feel comfortable with bash scripting, programming, working with containers, or anything upstream (Fedora, Flatpak, etc.) then feel free to contribute to Bazzite if you have want to add a feature or bug fix.  Building your own Bazzite will give you a sandbox to play in with your own personal changes to it. 
+If you feel comfortable with bash scripting, programming, working with containers, or anything upstream (Fedora, Flatpak, etc.) then feel free to contribute to Bazzite if you have want to add a feature or bug fix.  Building your own Bazzite will give you a sandbox to play in with your own personal changes to it.
 
-Also, this can be your own version of Bazzite to daily drive. This is useful to receive the same updates upstream, but with your own spin on it with differences that we will not include regarding specific packages, drivers, etc.  
+Also, this can be your own version of Bazzite to daily drive. This is useful to receive the same updates upstream, but with your own spin on it with differences that we will not include regarding specific packages, drivers, etc.
 
 Read about forking your own Bazzite image [here](/Advanced/creating_custom_image.md/#forking-bazzite) or use the [Image Template](https://github.com/ublue-os/image-template).  Alternatively, use the unaffiliated [BlueBuild](https://blue-build.org/learn/universal-blue/) project to build your own Bazzite.
 
