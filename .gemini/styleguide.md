@@ -38,3 +38,5 @@ For breaking changes, append a `!` after the type/scope. The breaking change des
 Example: `feat(api)!: send an email to the customer when a product is shipped`
 
 By following these guidelines, we can maintain a high-quality and informative project history.
+
+If a pull request title does not conform to these requirements, Gemini will suggest a compliant one.

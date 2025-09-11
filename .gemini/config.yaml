@@ -9,6 +9,6 @@ code_review:
   max_review_comments: -1
   pull_request_opened:
     help: false
-    summary: false # turned off by default
+    summary: true
     code_review: true
 ignore_patterns: []
