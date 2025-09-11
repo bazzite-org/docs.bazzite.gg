@@ -1,10 +1,10 @@
-# Pull Request Style Guide
+## Pull Request Style Guide
 
-## Pull Request Titles
+### Pull Request Titles
 
 Pull request titles MUST follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification. This ensures a consistent and readable commit history, which is used for automated changelog generation and versioning.
 
-### Format
+#### Format
 
 The pull request title must be in the following format:
 
@@ -12,7 +12,7 @@ The pull request title must be in the following format:
 <type>[optional scope]: <description>
 ```
 
-### Types
+#### Types
 
 The following types are allowed:
 
@@ -27,11 +27,11 @@ The following types are allowed:
 - **ci**: Changes to our CI configuration files and scripts
 - **build**: Changes that affect the build system or external dependencies
 
-### Scope
+#### Scope
 
 The scope provides additional contextual information and is contained within parenthesis, e.g., `feat(parser): add ability to parse arrays`.
 
-### Breaking Changes
+#### Breaking Changes
 
 For breaking changes, append a `!` after the type/scope. The breaking change description should be included in the pull request body.
 
