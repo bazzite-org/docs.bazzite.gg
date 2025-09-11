@@ -52,7 +52,7 @@ Distrobox containers can be used for both **development environments** and **ins
 
 ## Distrobox Graphical Interface
 
-![Distroshelf|690x382, 75%](../img/distroshelf.png)
+![Distroshelf|970x752, 75%](../img/distroshelf_fixedcrop.png)
 
 Distrobox containers can be created and managed graphically with [**DistroShelf**](https://github.com/ranfdev/DistroShelf) which is pre-installed.
 
