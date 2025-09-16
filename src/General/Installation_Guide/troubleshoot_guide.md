@@ -25,7 +25,12 @@ The "code 1" error is a generic error code that appears during installation when
 
 ## "Device is Active" Error
 
-**Watch this video for a workaround**:
+This error occurs when the installer encounters a BitLocker encrypted partition. You have two possible options:
+
+A. **If Dual Booting:** Shrink the partition in Windows before installing, enough to have enough room for a Bazzite install.
+B. **Bazzite Only:** Delete the BitLocker partition using a tool like GParted before installing.
+
+**Watch this video for a demonstration**:
 
 https://www.youtube.com/watch?v=FBGLLkIKp-w
 
