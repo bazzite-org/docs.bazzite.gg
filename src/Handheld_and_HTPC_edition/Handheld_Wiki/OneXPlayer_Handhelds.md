@@ -15,9 +15,7 @@ tags:
 ![onexplayer-x1|690x328, 100%](../../img/onexplayer-x1.jpeg)
 
 ### Workarounds / Known Issues
-- Fan curves do not work
-- Battery capacity limits do not work
-- Vibration intensity does not work
+- Adjusting the vibration intensity is not supported yet
 
 ## Contributing
 
