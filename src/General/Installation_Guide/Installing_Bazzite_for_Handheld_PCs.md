@@ -157,18 +157,6 @@ Read the [Handheld Wiki](https://universal-blue.discourse.group/docs?topic=1038)
 
 https://www.youtube.com/watch?v=wUDbMJtR1sM
 
-<hr>
-
-## **Video Tutorial**
-
-!!! attention
-
-    We strongly recommend **manual partitioning + creating a separate EFI partition** for dual-booting, **not** automatic partitioning.  See instructions for manual partitioning [here](/General/Installation_Guide/dual_boot_setup_guide/#manual-partitioning-to-the-same-drive-for-dual-boot-setups). The separate EFI partition will help prevent Windows Updates from affecting your Bazzite installation later down the line.
-
-https://www.youtube.com/watch?v=JxPsKhJGTrs
-
-<hr>
-
 ## Issues Installing Bazzite?
 
 View the [Installation Troubleshoot Guide](./troubleshoot_guide.md).
