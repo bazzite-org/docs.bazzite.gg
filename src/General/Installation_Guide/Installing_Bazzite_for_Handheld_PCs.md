@@ -9,6 +9,7 @@ authors:
   - "@aarron-lee"
   - "@HikariKnight"
   - "@ryanpolasky"
+  - "@tired-runner"
 tags:
   - Installation
 ---
@@ -92,9 +93,7 @@ You may need to research your handheld on how to boot from removable storage. It
 - Select your language, region, keyboard layout, and time zone.
 - Select the drive that Bazzite is going to be installed on.
   - Delete any partitions that you have remaining on the drive **unless [dual booting on the same drive](/General/Installation_Guide/dual_boot_setup_guide/#b-same-drive-method)**.
-  - If **[dual booting on the same drive](/General/Installation_Guide/dual_boot_setup_guide/#manual-partitioning-to-the-same-drive-for-dual-boot-setups)**, it is **strongly recommended** to do manual partitioning and create a separate EFI partition.
-    - The separate EFI partition will help prevent Windows Updates from affecting your Bazzite installation later down the line.
-  - Only use the automatic storage configuration when installing to separate drives
+  - Automatic partitioning is recommended.
 - Optionally encrypt the drive with a password if desired.
   - **If you lose this password, then it cannot be decrypted**.
   - **A PHYSICAL WIRED KEYBOARD IS REQUIRED TO UNLOCK THE DEVICE!**

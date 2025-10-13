@@ -6,6 +6,7 @@ authors:
   - "@castrojo"
   - "@noelmiller"
   - "@rothgar"
+  - "@tired-runner"
 tags:
   - Installation
 ---
@@ -81,7 +82,7 @@ Current [Fedora Atomic Desktop](https://fedoraproject.org/atomic-desktops/) user
 - Select your language, region, keyboard layout, and time zone.
 - Select the drive that Bazzite is going to be installed on.
   - Delete any partitions that you have remaining on the drive **unless dual booting on the same drive**.
-  - Recommended to use the automatic storage configuration **unless dual booting on the same drive**.
+  - Automatic partitioning is recommended.
 - Optionally encrypt the drive with a password if desired.
   - **If you lose this password, then it cannot be decrypted**.
 - Setup a user account.

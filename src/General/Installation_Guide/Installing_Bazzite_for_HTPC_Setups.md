@@ -6,6 +6,7 @@ authors:
   - "@castrojo"
   - "@noelmiller"
   - "@rothgar"
+  - "@tired-runner"
 tags:
   - Installation
 ---
@@ -84,7 +85,7 @@ Read the [Dual Boot Guide](https://universal-blue.discourse.group/docs?topic=274
 - Select your language, region, keyboard layout, and time zone.
 - Select the drive that Bazzite is going to be installed on.
   - Delete any partitions that you have remaining on the drive **unless dual booting on the same drive**.
-  - Recommended to use the automatic storage configuration **unless dual booting on the same drive**.
+  - Automatic partitioning is recommended.
 - Optionally encrypt the drive with a password if desired.
   - **If you lose this password, then it cannot be decrypted**.
   - **A PHYSICAL WIRED KEYBOARD IS REQUIRED TO UNLOCK THE DEVICE!**
