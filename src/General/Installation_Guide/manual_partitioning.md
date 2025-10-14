@@ -46,19 +46,19 @@ If you need a tutorial video for manual partitioning, watch this [tutorial at ti
     format: btrfs
     size: [max]
     ```
-  - **/** (root subvolume)
+  - **/**
     ![/ subvolume](../../img/root_subvolume.png)
     ```
     mount point: /
     format:      btrfs (subvolume)
     ```
-  - **/var** (/var subvolume)
+  - **/var**
     ![/var subvolume](../../img/var_subvolume.png)
     ```
     mount point: /var
     format:      btrfs (subvolume)
     ```
-  - **/var/home** (/var/home subvolume)
+  - **/var/home**
     ![/var/home subvolume](../../img/var_home_subvolume.png)
     ```
     mount point: /var/home
