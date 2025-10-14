@@ -23,48 +23,47 @@ If you need a tutorial video for manual partitioning, watch this [tutorial at ti
 1.  Select Installation Destination
 2.  Select `Advanced Custom(Blivet-GUI)` under Storage Configuration.
 ![Selecting manual partitioning](../../img/select_manual_partitioning.png)
-3.  Create partitions and devices as described:
-4. /boot/efi
-![EFI partition](../../img/efi_partition.png)
-```
-mount point: /boot/efi
-format:      EFI system partition
-size:        300MB
-```
-5. /boot
-!!! note "Nvidia users should use a 2GB `/boot` partition"
-![boot partition](../../img/boot_partition.png)
-```
-mount point: /boot
-format:      ext4
-size:        1GB
-```
-6. btrfs partition
-![btrfs partition](../../img/btrfs_partition.png)
-
-```
-mount point:
-format: btrfs
-size: [max]
-```
-7. /
-![/ subvolume](../../img/root_subvolume.png)
-```
-mount point: /
-format:      btrfs (subvolume)
-```
-8. /var
-![/var subvolume](../../img/var_subvolume.png)
-```
-mount point: /var
-format:      btrfs (subvolume)
-```
-9. /var/home
-![/var/home subvolume](../../img/var_home_subvolume.png)
-```
-mount point: /var/home
-format:      btrfs (subvolume)
-```
-10.  Select Done
-11.  Select Accept Changes
-12.  Continue with the installation.
+3.  Create the following partitions and devices:
+  -  **/boot/efi**
+     ![EFI partition](../../img/efi_partition.png)
+     ```
+     mount point: /boot/efi
+     format:      EFI system partition
+     size:        300MB
+     ```
+  - **/boot**
+    Note that Nvidia users should use a 2GB `/boot` partition
+    ![boot partition](../../img/boot_partition.png)
+    ```
+    mount point: /boot
+    format:      ext4
+    size:        1GB
+    ```
+  - **btrfs partition**
+    ![btrfs partition](../../img/btrfs_partition.png)
+    ```
+    mount point:
+    format: btrfs
+    size: [max]
+    ```
+  - **/** (root subvolume)
+    ![/ subvolume](../../img/root_subvolume.png)
+    ```
+    mount point: /
+    format:      btrfs (subvolume)
+    ```
+  - **/var** (/var subvolume)
+    ![/var subvolume](../../img/var_subvolume.png)
+    ```
+    mount point: /var
+    format:      btrfs (subvolume)
+    ```
+  - **/var/home** (/var/home subvolume)
+    ![/var/home subvolume](../../img/var_home_subvolume.png)
+    ```
+    mount point: /var/home
+    format:      btrfs (subvolume)
+    ```
+4.  Select Done
+5.  Select Accept Changes
+6.  Continue with the installation.
