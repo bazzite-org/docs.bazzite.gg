@@ -24,13 +24,13 @@ If you need a tutorial video for manual partitioning, watch this [tutorial at ti
 2.  Select `Advanced Custom(Blivet-GUI)` under Storage Configuration.
 ![Selecting manual partitioning](../../img/select_manual_partitioning.png)
 3.  Create the following partitions and devices:
-  -  **/boot/efi**
-     ![EFI partition](../../img/efi_partition.png)
-     ```
-     mount point: /boot/efi
-     format:      EFI system partition
-     size:        300MB
-     ```
+  - **/boot/efi**
+    ![EFI partition](../../img/efi_partition.png)
+    ```
+    mount point: /boot/efi
+    format:      EFI system partition
+    size:        300MB
+    ```
   - **/boot**
     Note that Nvidia users should use a 2GB `/boot` partition
     ![boot partition](../../img/boot_partition.png)
