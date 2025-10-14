@@ -32,12 +32,11 @@ If you need a tutorial video for manual partitioning, watch this [tutorial at ti
     size:        300MB
     ```
   - **/boot**
-    Note that Nvidia users should use a 2GB `/boot` partition
     ![boot partition](../../img/boot_partition.png)
     ```
     mount point: /boot
     format:      ext4
-    size:        1GB
+    size:        2GB
     ```
   - **btrfs partition**
     ![btrfs partition](../../img/btrfs_partition.png)
