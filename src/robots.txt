@@ -59,6 +59,7 @@ Disallow: /
 # BEGIN Custom content
 
 User-Agent: *
+Sitemap: https://docs.bazzite.gg/sitemap.xml
 Allow: /
 
 User-agent: ClaudeBot
