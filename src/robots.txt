@@ -31,27 +31,27 @@ Sitemap: https://docs.bazzite.gg/sitemap.xml
 Allow: /
 
 User-agent: Amazonbot
-Disallow:
+Allow: /
 
 User-agent: Applebot-Extended
-Disallow:
+Allow: /
 
 User-agent: Bytespider
-Disallow:
+Allow: /
 
 User-agent: CCBot
-Disallow:
+Allow: /
 
 User-agent: ClaudeBot
-Disallow:
+Allow: /
 
 User-agent: Google-Extended
-Disallow:
+Allow: /
 
 User-agent: GPTBot
-Disallow:
+Allow: /
 
 User-agent: meta-externalagent
-Disallow:
+Allow: /
 
 # END Cloudflare Managed Content
