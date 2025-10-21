@@ -30,28 +30,4 @@ Content-signal: search=yes,ai-train=no,ai-input=yes
 Sitemap: https://docs.bazzite.gg/sitemap.xml
 Allow: /
 
-User-agent: Amazonbot
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: meta-externalagent
-Allow: /
-
 # END Cloudflare Managed Content
