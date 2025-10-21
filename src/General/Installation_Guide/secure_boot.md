@@ -71,6 +71,14 @@ Use the following command to boot straight into your system's BIOS (if supported
 ```command
 ujust bios
 ```
+Complete MOK enrollment at boot
+On the next boot, you will see the blue MokManager screen:
+Choose: **Enroll MOK**
+When prompted for a password, enter:
+```command
+universalblue
+```
+After the reboot, the key is enrolled and Secure Boot can remain enabled. Your system should now boot normally under Secure Boot.
 
 ## Secure Boot Instructions for Upstream Fedora Atomic Desktop Images
 
