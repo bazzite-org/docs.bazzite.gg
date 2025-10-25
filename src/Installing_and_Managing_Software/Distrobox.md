@@ -63,7 +63,7 @@ Applications with a graphical user interface can integrate with your system with
 ```bash
 distrobox-export --app <package>
 ```
-To "un-export" the app enter the command below in the container terminal window
+To "un-export" the app, enter the command below in the container terminal window:
 
 ```bash
 distrobox-export --delete --app <package>
