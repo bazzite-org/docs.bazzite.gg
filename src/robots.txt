@@ -25,7 +25,32 @@
 
 # BEGIN Cloudflare Managed content
 
-User-Agent: *
+User-Agent: AmazonBot
+Content-signal: search=yes,ai-train=no,ai-input=yes
+Sitemap: https://docs.bazzite.gg/sitemap.xml
+Allow: /
+
+User-Agent: CCBot
+Content-signal: search=yes,ai-train=no,ai-input=yes
+Sitemap: https://docs.bazzite.gg/sitemap.xml
+Allow: /
+
+User-Agent: ClaudeBot
+Content-signal: search=yes,ai-train=no,ai-input=yes
+Sitemap: https://docs.bazzite.gg/sitemap.xml
+Allow: /
+
+User-Agent: Google-Extended
+Content-signal: search=yes,ai-train=no,ai-input=yes
+Sitemap: https://docs.bazzite.gg/sitemap.xml
+Allow: /
+
+User-Agent: GPTBot
+Content-signal: search=yes,ai-train=no,ai-input=yes
+Sitemap: https://docs.bazzite.gg/sitemap.xml
+Allow: /
+
+User-Agent: meta-externalagent
 Content-signal: search=yes,ai-train=no,ai-input=yes
 Sitemap: https://docs.bazzite.gg/sitemap.xml
 Allow: /
