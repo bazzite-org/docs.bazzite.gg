@@ -101,7 +101,7 @@ Replace files and directories is still supported in both the game directory and 
 
 - [vkBasalt](https://github.com/DadSchoorse/vkBasalt) - Vulkan post-processing layer with ReShade FX support.
 - [Mangohud](https://github.com/flightlessmango/Mangohud) - Hardware and frame-rate monitoring overlay.
-- [ScopeBuddy](/Advanced/scopebuddy/) - A manager script to make gamescope easier to use on desktop.
+- [ScopeBuddy](../Advanced/scopebuddy.md) - A manager script to make gamescope easier to use on desktop.
 
 ### Configuration Templates for DXVK, MangoHud, & vkBasalt
 
