@@ -45,8 +45,24 @@ Append `,user,exec` at the end if doesnt work properly
 
 ![](../img/GNOME_Mount_Options_new.2.png)
 
-## Emergency Mode After Mounting?
+## Troubleshooting
+
+### Emergency Mode after mounting?
 
 This video tutorial shows how to recover from your mounting mistakes.
 
 https://www.youtube.com/watch?v=-2wca_0CpXY
+
+### Drives will not auto-mount despite being BTRFS/ext4 (Requests authentication every boot to mount)
+
+1. Mount the target disk(s).
+
+2. Open Gnome Disks and navigate to the target disk.
+
+3. Click on Additional Partition Options > Edit Mount Options.
+
+4. Ensure "User Session Defaults" is FALSE and "Mount at system startup" is TRUE, then click "Ok"
+
+5. Repeat for any additional disks. You can confirm this worked by checking your Fstab file and seeing that the appropriate UUIDs have been added. `sudo cat /etc/fstab`
+
+
