@@ -51,6 +51,27 @@ title: Credits and Donating
 
 Love Bazzite and want to help sustain it's development?  Consider **sponsoring** the maintainers and contributors of the project.
 
+<div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+<a
+    href="https://opencollective.com/bazzite-us" target="_blank"
+    style="
+        background-color: var(--md-primary-fg-color);
+        color: var(--md-primary-bg-color);
+        border: none;
+        padding: 1rem;
+        border-radius: 24px;
+  ">Sponsor Bazzite ($ USA)</a>
+<a
+    href="https://opencollective.com/bazzite-eu" target="_blank"
+    style="
+        background-color: var(--md-primary-fg-color);
+        color: var(--md-primary-bg-color);
+        border: none;
+        padding: 1rem;
+        border-radius: 24px;
+  ">Sponsor Bazzite (€ Europe)</a>
+</div>
+
 ## Bazzite Maintainers
 These are the people keeping the lights on and the project moving forward.
 <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
