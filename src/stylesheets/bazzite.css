@@ -105,6 +105,10 @@ nav.md-nav {
 .sponsor-button {
   background-color: var(--md-primary-fg-color);
   color: var(--md-primary-bg-color)!important;
+  & * {
+      color: var(--md-primary-bg-color)!important;
+  }
+  cursor: pointer;
   border: none;
   padding: 1rem;
   border-radius: 24px;
