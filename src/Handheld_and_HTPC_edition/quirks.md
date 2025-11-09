@@ -32,16 +32,10 @@ Then add this to the file:
 
 `OUTPUT_CONNECTOR=DP-1`
 Change `DP-1` to the correct output.
-You can find your display outputs on **KDE Plasma** using the command
+You can find your display outputs using the command
 
 ```
-kscreen-doctor -o
-```
-
-You can find your display outputs in **GNOME** using this command
-
-```
-gnome-randr
+grep -r '^connected' /sys/class/drm/*/status | grep -Po 'card.-\K.*'
 ```
 
 Save with <kbd>CTRL</kbd> + <kbd>X</kbd> then pressing <kbd>Y</kbd> followed by <kbd>ENTER</kbd>
