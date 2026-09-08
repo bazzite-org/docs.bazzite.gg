@@ -111,9 +111,9 @@ PROTON_USE_WINED3D=1 %command%
 
 #### NTFS
 
-如果你先前使用的是 Windows 并且有在 Windows 下配置的安装了游戏的外接硬盘， If you are coming from Windows and plan to game on a secondary drive with games already installed on it, then we regret to inform you that the NTFS filesystem is **unsupported** for PC gaming on Bazzite.
+如果你先前使用的是 Windows 并且有在 Windows 下配置的安装了游戏的外接硬盘，有个坏消息：Bazzite **无法支持**安装在 NTFS 文件系统上的游戏。
 
-Playing games off of NTFS causes various issues, including but not limited to **games not launching at all**, and will eventually result in **data corruption** and **permanent data loss**!
+游戏安装在 NTFS 分区上时会产生许多问题，包括**完全无法启动**等，且一定会导致难以修复的数据损坏。
 
 #### exFAT 和 FAT32
 
@@ -123,8 +123,8 @@ FAT32 和 exFAT 都**不受支持**。两者都 **不支持符号链接**，因�
 
 ### 和双启动的 Windows 共用游戏库
 
-Install the unofficial [WinBtrfs](https://github.com/maharmstone/btrfs) driver on your Windows installation **at your own risk**. Please make sure to read any documentation associated with this project before installing the driver on Windows.
+非官方的 [WinBtrfs](https://github.com/maharmstone/btrfs) 项目提供了在 Windows 上操作 BTRFS 文件系统的驱动程序，但使用时应注意数据风险。在安装前，请务必阅读项目提供的文档及相关注意事项。
 
-#### Video Tutorial
+#### 视频指南
 
 https://www.youtube.com/watch?v=h6fc-3CCXbA
