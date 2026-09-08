@@ -8,7 +8,7 @@ title: 游戏启动器
 
 Steam 允许你在 Linux 上运行 Windows 游戏。这一过程使用 [**Proton**](https://github.com/ValveSoftware/Proton) 这一工具来实现 Windows 的兼容性。Proton 的本质是许多相关项目（比如 Wine）和特化补丁的集合，关于它的更多信息可以参考[这里](/Gaming/gaming-intro/#steam-games)。
 
-### Forcing A Specific Proton / Steam Play Tool Version
+### 指定特定的 Proton / Steam Play 版本
 
 #### 重要注意事项
 
@@ -50,10 +50,10 @@ Steam 允许你在 Linux 上运行 Windows 游戏。这一过程使用 [**Proton
 
 ![Lutris manually adding games example 1|690x213](../img/Lutris_Setup_Add_Local_Game_1.png)
 
-By default, Lutris will use the `~/Games` directory for each game's [**prefix directory**](/Gaming/Managing_and_modding_games/#what-is-a-proton-or-wine-prefix).
+Lutris 默认将每个游戏的 [**Prefix**](/Gaming/Managing_and_modding_games/#what-is-a-proton-or-wine-prefix) 保存在`~/Games`目录下。
 
-### Adding Shortcuts and Desktop Entries
+### 添加快捷方式和桌面条目
 
 ![Lutris_Right_Click_Menu|421x447, 75%](../img/Lutris_Setup_Shortcut.png)
 
-You may add a shortcut for the game into the App Menu or your Desktop by going into the Edit Tab or the Right Click Context Menu of the launcher of your choice and selecting the respective entries.
+通常可以通过启动器的编辑功能或右键点击游戏条目中的对应选项，为一个游戏添加快捷方式。

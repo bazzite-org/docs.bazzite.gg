@@ -16,7 +16,7 @@ Steam 通常是在 Bazzite 上运行 Windows 游戏最简单的方式，因为�
 
 ### 非 Steam 游戏
 
-<small>_With this, we have included everything in the observable universe into Bazzite Docs, from Steam-Games... to Non Steam-Games. Q.E.D._</small>
+<small>_至此，从 Steam 游戏到非 Steam 的一切都已加入 Bazzite <del>豪华午餐</del>指南。世界的真理，我已解明！_</small>
 
 Bazzite 预安装了 **Lutris** 以管理非 Steam 的游戏，它也同样提供 Proton/Wine 管理的功能。Bazaar 上也能找到 [**Faugus Launcher**](https://flathub.org/en/apps/io.github.Faugus.faugus-launcher)，提供相对更简洁的用户界面。对于通过 Epic Games Launcher、GOG 和 Amazon Games Launcher 运行的游戏，[**Heroic Games Launcher**](https://flathub.org/apps/com.heroicgameslauncher.hgl) 会更加合适。
 
