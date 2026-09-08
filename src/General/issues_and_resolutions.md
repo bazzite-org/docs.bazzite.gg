@@ -4,48 +4,80 @@ title: Common Issues & Resolutions
 
 # Common Issues & Resolution
 
-## Steam Big Picture Mode is slow
+## Index
 
-When you select **Steam Menu → View → Big Picture** the user interface runs sluggishly, while the games that run through the interface works smoothly.
-
-If you encounter this issue, close Steam completely and start Steam using the **Steam Big Picture Mode** menu shortcut. Also make sure that **Steam Settings → Interface → Enable GPU accelerated rendering in web views (requires restart)** is enabled in the Steam settings.
-
->**Note**: This fix also fixes the performance issues in Steam Gaming Mode on Nvidia GPUs, however, this comes with a drawback that the Steam menu and side menu sometimes do not render properly.
-
----
-
-## Audio is soft on ASUS ROG Ally hardware
-
-There are two audio devices that appear on the Rog Ally:
-
--   **Family 17h/19h/1ah HD Audio Controller**
--   **ROG Ally**
-
-Both affect each other's audio volume, so they must be at the same volume level.
+- [Display and Graphics](#1-display-and-graphics)
+- [Controllers and Gaming Inputs](#2-controllers-and-gaming-inputs)
+- [Network and Wi-Fi](#3-network-and-wi-fi)
+- [Desktop Environment and System Configuration](#4-desktop-environment-and-system-configuration)
+- [Application and Software](#5-application-and-software)
 
 ---
 
-## Disable Special Character Pop-Up on KDE Plasma
+## 1. Display and Graphics
 
-KDE Plasma 6.7 added the Plasma Keyboard feature, which shows an on-screen pop-up when certain keys are held for a period.
+### Cursor is Flickering or has Disappeared
 
-You may disable it in **System Settings → Keyboard → On-Screen Keyboard → Show popup when holding a key**.
+This is typically due to bugs in the GPU drivers. You may temporarily disable Hardware Cursors as a workaround.
 
-![Turning off special characters pop-up|1181x1024, 50%](/img/turn-off-special-char-pop-up.png)
+=== "KDE Plasma"
+
+    Add an environment variable with this command:
+
+    ```bash
+    echo "KWIN_FORCE_SW_CURSOR=1" > ~/.config/environment.d/99-kwin-force-sw-cursor.conf
+    ```
+
+=== "GNOME"
+
+    Add an environment variable with this command:
+
+    ```bash
+    echo "MUTTER_DEBUG_DISABLE_HW_CURSORS=1" > ~/.config/environment.d/99-mutter-disable-hw-cursor.conf
+    ```
+
+!!! warning "This fix may negatively affect the battery life of your laptop or handheld."
 
 ---
 
-## Firefox and KeePassXC Does Not Work Together
+### Flatpak Apps have no Hardware Acceleration on Nvidia
 
-This is because KeePassXC(or other password managers installed via Flatpak) is sandboxed and can only be accessed by a non-sandboxed application.
+If you have recently updated Bazzite on a device with an Nvidia GPU, you might notice that Flatpak applications are running poorly and/or have no hardware acceleration, and/or receive a warning about **Nvidia Flatpak Runtime mismatch**.
 
-You may try installing Firefox and KeePassXC via distrobox, though there may be problems regarding hardware acceleration.
+In this case, you should update all Flatpaks in **Bazaar**, or select **Update Nvidia Flatpak Runtime** under **Bazzite Portal** → **Manage Bazzite** if you do not want to update other Flatpaks.
 
-!!! info "Alternatively, you may also try [this guide](https://discourse.flathub.org/t/how-to-run-firefox-and-keepassxc-in-a-flatpak-and-get-the-keepassxc-browser-add-on-to-work/437). Note that Bazzite officially neither maintains nor endorses the aforementioned guide and it is only included for the sake of completeness. Only follow it at **your own risk**. "
+!!! info "Bazzite provides a systemd service that automates this, but you may still need to update it manually in some situations (e.g. No Internet connection on startup). The ideal solution is for upstream Flatpak/Nvidia to improve the way these Runtimes are handled, or to create a package that provides a Flatpak Nvidia driver using system libraries, but those require a lot more work to make possible."
 
 ---
 
-## Gamepads and Handheld Joysticks Don't Work in Desktop Mode
+### HDMI-CEC Does Not Work Consistently
+
+In [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal), select **Troubleshoot → Change CEC mode**:
+
+!!! note "`cecd` is known to interfere with wakeup on HTPC setups that use dongles. Try setting dGPU mode and see if HDMI-CEC behavior is consistent."
+
+*   dGPU mode (Legacy): Use the “legacy” cec-control services using `libcec` and `cec-ctl`, known to work pretty well on HTPCs with things like pulse8 and ugreen adaptors. These adapters are typically used to work around dGPUs not having cec pin 13 wired up. 
+*   Native mode (New): Use Valve's newer `linux-cec`/`cecd` system instead and mask the legacy services.
+
+!!! info "Native mode builds `linux-cec` from Valve's upstream GitLab repo and includes the inputattach CEC units and linuxconsoletools, so Pulse-Eight style adapters can be attached to the kernel CEC subsystem. However, Ugreen HDMI Adapters are known to behave inconsistently when using Native mode."
+
+---
+
+### Nvidia Optimus GPU not Detected on Laptops
+
+If you are running Bazzite on a laptop with an Nvidia Optimus GPU, you might notice that games are running poorly and seem to be running on the integrated GPU.
+
+In this case, use the preinstalled [Cardwire](https://github.com/OpenGamingCollective/cardwire) app to configure your GPU Power Options. You may simply search **cardwire** to open the app.
+
+> Learn more about Cardwire [here](/Advanced/cardwire)!
+
+!!! info "If you are looking for **Advanced Optimus** functions, we regret to tell you that there are currently **no** working way to dynamically MUX displays outside of some very early work on AMD SmartMUX. Changing MUX settings currently **requires** a reboot."
+
+---
+
+## 2. Controllers and Gaming Inputs
+
+### Gamepads and Handheld Joysticks Don't Work in Desktop Mode
 
 Open **Steam Settings → Controller → Non-Game Controller Layouts → Desktop Layout**. Click **Edit** → **Enable Steam Input** and configure how the controller needs to act as keyboard and mouse in Desktop Mode.
 
@@ -55,31 +87,19 @@ Open **Steam Settings → Controller → Non-Game Controller Layouts → Desktop
 
 ---
 
-## Setting Bazzite's Desktop Editions to automatically login
+### Xbox Controller over Bluetooth is Stuck on a Connecting Loop and the Xbox Button Keeps Flashing
 
-=== "KDE Plasma"
+This is because your controller is not on the latest firmware.
 
-    Open **System Settings → Colors and Themes → Login Screen**. On that screen, tick **"Automatically log in"**, select your user and for the session, select **"Plasma"** and don't forget to to click on the **"Apply"** button.
-    
-=== "GNOME"
+The easiest solution here is to connect the controller to a Windows machine. Download the Xbox Accessories app and update the controller to the latest firmware. After that, the controller should connect seamlessly. 
 
-    Open the **Settings application → Users**. Click the **Unlock** button in the top right corner. Then switch on **Automatic Login**.
+A more advanced way is to spin up a Windows VM and passthrough the controller to do the firmware update there.
 
 ---
 
-## HTPC legacy hardware setup
+## 3. Network and Wi-Fi
 
-As Steam Gaming Mode is not supported on some GPUs, the guide below is a way to set up a similar experience using Bazzite's Desktop image.
-
-Enable auto-login and set Steam to automatically launch in Steam's Big Picture Mode for a decent couch gaming experience.
-
-There is a video guide that you can follow for Bazzite's GNOME Desktop image using a Nvidia GPU (before Nvidia hardware could run Steam Gaming Mode, but same idea):
-
-https://www.youtube.com/watch?v=F9l-RQvCPMo
-
-If you are using Bazzite's KDE Plasma image, then you can skip the "Making Gnome look more familiar to Windows users" section, and use the steps above to get auto login working in Bazzite KDE. Then finally set Steam Big Picture Mode to auto-start in **Settings → Autostart**.
-
-## No Wi-Fi or wired connection in Bazzite when dual-booting with Windows
+### No Network Connection in Bazzite When Dual-Booting with Windows
 
 If you are dual-booting Windows with Bazzite and your Wi-Fi/wired connection works in Windows but fails in Bazzite sometimes, it is highly likely this is due to Windows Fast Startup.
 
@@ -99,25 +119,24 @@ You can do this by:
 
 Now if you now select the Shutdown option, Windows will shut down completely and not interfere with Bazzite.
 
-## Wi-Fi is slow / Wi-Fi lag spikes
+---
+
+### Wi-Fi is Slow / Wi-Fi Lag Spikes
 
 The Wi-Fi power saving feature in Linux may work poorly on some devices. If the problem is not present in Windows, you may try the solution below. 
 
-If you are using Steam Gaming Mode (i.e. not booting straight into a desktop environment like KDE or GNOME), try:
-
-1. Steam settings -> System -> "Enable Developer Mode"
-2. Steam settings -> Developer -> Uncheck "Enable Wi-Fi Power Management"
-3. Reboot
-
-If the above does not work, and/or for users booting straight into a desktop environment like KDE or Gnome, try:
+> For devices running the `-deck` image, please follow instructions [here](/Handheld_and_HTPC_edition/quirks/#wi-fi-is-slow-wi-fi-lag-spikes).
 
 Open the terminal and run `ip link show`, this will list all your network devices and the output should look something like this:
 
+
 ```
+
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
 2: wlp6s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DORMANT group default qlen 1000
-    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
+link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff permaddr 00:00:00:00:00:00
+
 ```
 
 The device that we are interested in is the Wi-Fi device. In this example (ROG Ally), the Wi-Fi device is called `wlp6s0`.
@@ -125,36 +144,59 @@ The device that we are interested in is the Wi-Fi device. In this example (ROG A
 !!! tip "Another common name for the Wi-Fi device is `wlan0`."
 
 Next, run `iw wlp6s0 get power_save` (change `wlp6s0` if your device name is different) to confirm if power saving is on:
+
 ```
+
 Power save: on
+
 ```
 
-There are different steps to resolve this depending on your current Wi-Fi backend.
-!!! info "[`iwd`](https://wiki.archlinux.org/title/Iwd) has been abandoned due to Intel shifting their priorities away from open source. You may still try it to fix lag spikes caused by [`wpa_supplicant`](https://wiki.archlinux.org/title/Wpa_supplicant), but it may stop working at anytime and is thus highly advisable to [switch your Wi-Fi backend](./#switching-wi-fi-backends) to [`wpa_supplicant`](https://wiki.archlinux.org/title/Wpa_supplicant)."
+We may then configure NetworkManager to disable the power save feature for all Wi-Fi devices. Open a terminal and run
 
-=== "wpa_supplicant (iwd is OFF)"
+```bash
+echo -e "[connection]\nwifi.powersave = 2" | sudo tee /etc/NetworkManager/conf.d/wifi-powersave-off.conf
+systemctl restart NetworkManager
 
-    We are going to configure NetworkManager to not use the power save feature for all Wi-Fi devices. Open a terminal and run
+```
 
-    ```bash
-    echo -e "[connection]\nwifi.powersave = 2" | sudo tee /etc/NetworkManager/conf.d/wifi-powersave-off.conf
-    systemctl restart NetworkManager
-    ```
+Next, run `iw wlp6s0 get power_save` to confirm that power save is off:
 
-    Next, run `iw wlp6s0 get power_save` to confirm that power save is off:
-    ```
-    Power save: off
-    ```
+```
+Power save: off
 
-    !!! warning "This fix may negatively affect the battery life of your laptop or handheld."
-    
-    If you wish to reverse this change, delete the config file:
-    ```bash
-    sudo rm /etc/NetworkManager/conf.d/wifi-powersave-off.conf
-    systemctl restart NetworkManager
-    ```
-    
-=== "iwd (iwd is ON)"
+```
+
+!!! warning "This fix may negatively affect the battery life of your laptop or handheld."
+
+If you wish to reverse this change, delete the config file:
+
+```bash
+sudo rm /etc/NetworkManager/conf.d/wifi-powersave-off.conf
+systemctl restart NetworkManager
+
+```
+
+---
+
+### `iwd` Specific Issues
+
+??? quote "Expand to learn more"
+
+    [`iwd`](https://wiki.archlinux.org/title/Iwd) has been abandoned due to Intel shifting their priorities away from open source. It is no longer included in recent images as it does not work with newer kernels, and these instructions are only kept for the sake of completeness.
+
+    !!! warning "The following are [`iwd`](https://wiki.archlinux.org/title/Iwd) specific issues. It is highly advisable to [switch your Wi-Fi backend](./#switching-wi-fi-backends) to [`wpa_supplicant`](https://wiki.archlinux.org/title/Wpa_supplicant) as the [`iwd`](https://wiki.archlinux.org/title/Iwd) project is no longer maintained by Intel."
+
+    !!! info "On recent images where [`iwd`](https://wiki.archlinux.org/title/Iwd) is removed, your backend will be automatically switched to [`wpa_supplicant`](https://wiki.archlinux.org/title/Wpa_supplicant) during boot up of the new image. The following instructions only apply for images where [`iwd`](https://wiki.archlinux.org/title/Iwd) is still present."
+
+    ---
+
+    #### Switching Wi-Fi Backends
+
+    To switch your Wi-Fi backend, open [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal/), and under the **Troubleshooting** page, select **Change Wi-Fi system back-end**.
+
+    ---
+
+    #### Wi-Fi is slow / Wi-Fi lag spikes - IWD
 
     We are going to configure iwd to not use the power save feature for all Wi-Fi devices. Open a terminal and run
 
@@ -169,135 +211,128 @@ There are different steps to resolve this depending on your current Wi-Fi backen
     ```
 
     !!! warning "This fix may negatively affect the battery life of your laptop or handheld."
-    
+
     If you wish to reverse this change, delete the config file:
     ```bash
     sudo rm /etc/iwd/main.conf
     systemctl restart iwd
     ```
 
----
+    ---
 
-## Error on connecting to Wi-Fi: "Failed to add new connection: 802.1x connections must have IWD provisioning files"
+    #### Error on connecting to Wi-Fi: "Failed to add new connection: 802.1x connections must have IWD provisioning files"
 
-!!! warning "This is an [`iwd`](https://wiki.archlinux.org/title/Iwd) specific issue. It is highly advisable to [switch your Wi-Fi backend](./#switching-wi-fi-backends) to [`wpa_supplicant`](https://wiki.archlinux.org/title/Wpa_supplicant) as the [`iwd`](https://wiki.archlinux.org/title/Iwd) project is no longer maintained by Intel."
+    NetworkManager cannot automatically generate 802.1x connections when using the `iwd` backend.
 
-NetworkManager cannot automatically generate 802.1x connections when using the `iwd` backend.
+    If you need to continue using the `iwd` backend and just want to connect to `eduroam`, follow these steps:
 
-If you need to continue using the `iwd` backend and just want to connect to `eduroam`, follow these steps:
+    ```bash
+    sudo nano /var/lib/iwd/eduroam.8021x
+    ```
 
-```bash
-sudo nano /var/lib/iwd/eduroam.8021x
-```
+    Then add the following:
 
-Then add the following:
+    ```bash
+    [Security]
+    EAP-Method=PEAP
+    EAP-Identity=anonymous@<university.domain>
+    EAP-PEAP-Phase2-Method=MSCHAPV2
+    EAP-PEAP-Phase2-Identity=<username@university.domain>
+    EAP-PEAP-Phase2-Password=<password>
 
-```bash
-[Security]
-EAP-Method=PEAP
-EAP-Identity=anonymous@<university.domain>
-EAP-PEAP-Phase2-Method=MSCHAPV2
-EAP-PEAP-Phase2-Identity=<username@university.domain>
-EAP-PEAP-Phase2-Password=<password>
+    [Settings]
+    AutoConnect=true
+    ```
 
-[Settings]
-AutoConnect=true
-```
+    Make sure to replace `<university.domain>`, `<username@university.domain>` and `<password>` with proper login information. Afterwards, press `Ctrl+X` and `Y` to Save & Exit.
 
-Make sure to replace `<university.domain>`, `<username@university.domain>` and `<password>` with proper login information. Afterwards, press `Ctrl+X` and `Y` to Save & Exit.
+    Now try to connect again. If you still can't connect, execute:
 
-Now try to connect again. If you still can't connect, execute:
+    ```bash
+    nmcli connection modify eduroam 802-1x.phase1-auth-flags 32
+    ```
 
-```bash
-nmcli connection modify eduroam 802-1x.phase1-auth-flags 32
-```
+    And try to connect again.
 
-And try to connect again.
+    ---
 
----
+    #### Error on connecting to Wi-Fi: "IP configuration was unavailable" when connecting to 802.1x wireless networks
 
-## Error on connecting to Wi-Fi: "IP configuration was unavailable" when connecting to 802.1x wireless networks
+    !!! warning "This is an [`iwd`](https://wiki.archlinux.org/title/Iwd) specific issue. It is highly advisable to [switch your Wi-Fi backend](./#switching-wi-fi-backends) to [`wpa_supplicant`](https://wiki.archlinux.org/title/Wpa_supplicant) as the [`iwd`](https://wiki.archlinux.org/title/Iwd) project is no longer maintained by Intel."
 
-!!! warning "This is an [`iwd`](https://wiki.archlinux.org/title/Iwd) specific issue. It is highly advisable to [switch your Wi-Fi backend](./#switching-wi-fi-backends) to [`wpa_supplicant`](https://wiki.archlinux.org/title/Wpa_supplicant) as the [`iwd`](https://wiki.archlinux.org/title/Iwd) project is no longer maintained by Intel."
+    !!! warning "[`iwd`](https://wiki.archlinux.org/title/Iwd) is no longer included in recent images as it does not work with newer kernels. These instructions are only kept for the sake of completeness."
 
-Check the system logs with `ujust logs-this-boot | grep NetworkManager`, you should be able to see that 
+    Check the system logs with `ujust logs-this-boot | grep NetworkManager`, you should be able to see that 
 
-```
-NetworkManager[1563]: <info>  [1770094603.8488] device (wlan0): state change: failed -> disconnected (reason 'none', managed-type: 'full')
-NetworkManager[1563]: <info>  [1770094603.8568] dhcp4 (wlan0): canceled DHCP transaction
-NetworkManager[1563]: <info>  [1770094603.8569] dhcp4 (wlan0): activation: beginning transaction (timeout in 45 seconds)
-NetworkManager[1563]: <info>  [1770094603.8569] dhcp4 (wlan0): state changed no lease
-```
+    ```console
+    NetworkManager[1563]: <info>  [1770094603.8488] device (wlan0): state change: failed -> disconnected (reason 'none', managed-type: 'full')
+    NetworkManager[1563]: <info>  [1770094603.8568] dhcp4 (wlan0): canceled DHCP transaction
+    NetworkManager[1563]: <info>  [1770094603.8569] dhcp4 (wlan0): activation: beginning transaction (timeout in 45 seconds)
+    NetworkManager[1563]: <info>  [1770094603.8569] dhcp4 (wlan0): state changed no lease
+    ```
 
-When using the `iwd` backend, NetworkManager may be unable to obtain a DHCP lease on an Enterprise network if you have connected to it previously on a different backend or a different OS. 
+    When using the `iwd` backend, NetworkManager may be unable to obtain a DHCP lease on an Enterprise network if you have connected to it previously on a different backend or a different OS. 
 
-If you prefer to keep using the `iwd` backend, follow these steps:
+    If you prefer to keep using the `iwd` backend, follow these steps:
 
-```bash
-sudo mkdir -p /etc/iwd/
-sudo nano /etc/iwd/main.conf
-```
+    ```bash
+    sudo mkdir -p /etc/iwd/
+    sudo nano /etc/iwd/main.conf
+    ```
 
-Then add the following:
+    Then add the following:
 
-```ini
-[General]
-AddressRandomization=network
-```
+    ```ini
+    [General]
+    AddressRandomization=network
+    ```
 
-Afterwards, press `Ctrl+X` and `Y` to Save & Exit, then reload `iwd` by running:
+    Afterwards, press `Ctrl+X` and `Y` to Save & Exit, then reload `iwd` by running:
 
-```bash
-systemctl daemon-reload
-systemctl restart iwd
-```
+    ```bash
+    systemctl daemon-reload
+    systemctl restart iwd
+    ```
 
-You should be able to connect to the enterprise network.
-
----
-
-## Switching Wi-Fi Backends
-
-!!! info "[`iwd`](https://wiki.archlinux.org/title/Iwd) has been abandoned due to Intel shifting their priorities away from open source. You may still try it to fix lag spikes caused by [`wpa_supplicant`](https://wiki.archlinux.org/title/Wpa_supplicant), but it may stop working at anytime and is thus highly advisable to [switch your Wi-Fi backend](./#switching-wi-fi-backends) to [`wpa_supplicant`](https://wiki.archlinux.org/title/Wpa_supplicant)."
-
-To switch your Wi-Fi backend, open [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal/), and under the **Troubleshooting** page, select **Change Wi-Fi system back-end**.
+    You should be able to connect to the enterprise network.
 
 ---
 
-## HDMI-CEC Does Not Work Consistently
+## 4. Desktop Environment and System Configuration
 
-In [Bazzite Portal](/Installing_and_Managing_Software/Bazzite_Portal), select **Troubleshoot → Change CEC mode**:
+### Disable Special Character Pop-Up on KDE Plasma
 
-!!! note "`cecd` is known to interfere with wakeup on HTPC setups that use dongles. Try setting dGPU mode and see if HDMI-CEC behavior is consistent."
+KDE Plasma 6.7 added the Plasma Keyboard feature, which shows an on-screen pop-up when certain keys are held for a period.
 
-*   dGPU mode (Legacy): Use the “legacy” cec-control services using `libcec` and `cec-ctl`, known to work pretty well on HTPCs with things like pulse8 and ugreen adaptors. These adapters are typically used to work around dGPUs not having cec pin 13 wired up. 
-*   Native mode (New): Use Valve's newer `linux-cec`/`cecd` system instead and mask the legacy services.
+You may disable it in **System Settings → Keyboard → On-Screen Keyboard → Show popup when holding a key**.
 
-!!! info "Native mode builds `linux-cec` from Valve's upstream GitLab repo and includes the inputattach CEC units and linuxconsoletools, so Pulse-Eight style adapters can be attached to the kernel CEC subsystem. However, Ugreen HDMI Adapters are known to behave inconsistently when using Native mode."
-
-## Nvidia Optimus GPU not detected on laptops
-
-If you are running Bazzite on a laptop with an Nvidia Optimus GPU, you might notice that games are running poorly and seem to be running on the integrated GPU.
-
-In this case, use the preinstalled [Cardwire](https://github.com/OpenGamingCollective/cardwire) app to configure your GPU Power Options. You may simply search **cardwire** to open the app.
-
-> Learn more about Cardwire [here](/Advanced/cardwire)!
-
-!!! info "If you are looking for **Advanced Optimus** functions, we regret to tell you that there are currently **no** working way to dynamically MUX displays outside of some very early work on AMD SmartMUX. Changing MUX settings currently **requires** a reboot."
+![Turning off special characters pop-up|1181x1024, 50%](/img/turn-off-special-char-pop-up.png)
 
 ---
 
-## Flatpak Apps have no Hardware Acceleration on Nvidia
+### Dolphin SMB Share does not work
 
-If you have recently updated Bazzite on a device with an Nvidia GPU, you might notice that Flatpak applications are running poorly and/or have no hardware acceleration, and/or receive a warning about **Nvidia Flatpak Runtime mismatch**.
+This is because Atomic installations handles Groups and Users slightly differently, and puts them somewhere different to where Dolphin expects, so the button to add user to group does not actually work.
 
-In this case, you should update all Flatpaks in **Bazaar**, or select **Update Nvidia Flatpak Runtime** under **Bazzite Portal** → **Manage Bazzite** if you do not want to update other Flatpaks.
+You will need to manually add your user to the **`usershares`** group.
 
-!!! info "Bazzite provides a systemd service that automates this, but you may still need to update it manually in some situations (e.g. No Internet connection on startup). The ideal solution is for upstream Flatpak/Nvidia to improve the way these Runtimes are handled, or to create a package that provides a Flatpak Nvidia driver using system libraries, but those require a lot more work to make possible."
+> Detailed instructions can be found [here](/Advanced/add-user-to-group).
 
 ---
 
-## Waking from sleep doesn't work with some Gigabyte motherboard
+### Setting Bazzite's Desktop Editions to Automatically Login
+
+=== "KDE Plasma"
+
+    Open **System Settings → Colors and Themes → Login Screen**. On that screen, tick **"Automatically log in"**, select your user and for the session, select **"Plasma"** and don't forget to to click on the **"Apply"** button.
+
+=== "GNOME"
+
+    Open the **Settings application → Users**. Click the **Unlock** button in the top right corner. Then switch on **Automatic Login**.
+
+---
+
+### Waking from Sleep Doesn't Work with Some Gigabyte Motherboards
 
 <small>_Why does Life Slumber? ...Because Gigabyte motherboards can't wake from sleep._</small>
 
@@ -307,50 +342,43 @@ This can be fixed by disabling GPP0 and GPP8 wakeup. A hidden ujust command is p
 
 ```bash
 ujust _toggle-gigabyte-wake-fix
+
 ```
 
 ---
 
-## Xbox controller over Bluetooth is stuck on a connecting loop and the Xbox button keeps flashing
+## 5. Application and Software
 
-This is because your controller is not on the latest firmware.
+### Firefox and KeePassXC Does Not Work Together
 
-The easiest solution here is to connect the controller to a Windows machine. Download the Xbox Accessories app and update the controller to the latest firmware. After that, the controller should connect seamlessly. 
+This is because KeePassXC(or other password managers installed via Flatpak) is sandboxed and can only be accessed by a non-sandboxed application.
 
-A more advanced way is to spin up a Windows VM and passthrough the controller to do the firmware update there.
+You may try installing Firefox and KeePassXC via distrobox, though there may be problems regarding hardware acceleration.
 
----
-
-## My Cursor is Flickering/ has Disappeared
-
-This is typically due to bugs in the GPU drivers. You can temporarily disable Hardware Cursors as a workaround.
-
-=== "KDE Plasma"
-
-    Add an environment variable with this command:
-
-    ```bash
-    echo "KWIN_FORCE_SW_CURSOR=1" > ~/.config/environment.d/99-kwin-force-sw-cursor.conf
-    ```
-
-=== "GNOME"
-
-    Add an environment variable with this command:
-
-    ```bash
-    echo "MUTTER_DEBUG_DISABLE_HW_CURSORS=1" > ~/.config/environment.d/99-mutter-disable-hw-cursor.conf
-    ```
-    
-!!! warning "This fix may negatively affect the battery life of your laptop or handheld."
+!!! info "Alternatively, you may also try [this guide](https://discourse.flathub.org/t/how-to-run-firefox-and-keepassxc-in-a-flatpak-and-get-the-keepassxc-browser-add-on-to-work/437). Note that Bazzite officially neither maintains nor endorses the aforementioned guide and it is only included for the sake of completeness. Only follow it at **your own risk**. "
 
 ---
 
-## Dolphin SMB Share does not work
+### HTPC Legacy Hardware Setup
 
-This is because Atomic installations handles Groups and Users slightly differently, and puts them somewhere different to where Dolphin expects, so the button to add user to group does not actually work.
+As Steam Gaming Mode is not supported on some GPUs, the guide below is a way to set up a similar experience using Bazzite's Desktop image.
 
-You will need to manually add your user to the **`usershares`** group.
+[Enable auto-login](#setting-bazzites-desktop-editions-to-automatically-login) and set Steam to automatically launch in Steam's Big Picture Mode for a decent couch gaming experience.
 
-> Detailed instructions can be found [here](/Advanced/add-user-to-group).
+There is a video guide that you can follow for Bazzite's GNOME Desktop image using a Nvidia GPU (before Nvidia hardware could run Steam Gaming Mode, but same idea):
+
+https://www.youtube.com/watch?v=F9l-RQvCPMo
+
+!!! info "If you are using Bazzite's KDE Plasma image, then you can skip the "Making Gnome look more familiar to Windows users" section, and simply enable auto-login and set Steam Big Picture Mode to auto-start in **Settings → Autostart**."
+
+---
+
+### Steam Big Picture Mode is slow
+
+When you select **Steam Menu → View → Big Picture** the user interface runs sluggishly, while the games that run through the interface works smoothly.
+
+If you encounter this issue, close Steam completely and start Steam using the **Steam Big Picture Mode** menu shortcut. Also make sure that **Steam Settings → Interface → Enable GPU accelerated rendering in web views (requires restart)** is enabled in the Steam settings.
+
+> **Note**: This fix also fixes the performance issues in Steam Gaming Mode on Nvidia GPUs, however, this comes with a drawback that the Steam menu and side menu sometimes do not render properly.
 
 ---

@@ -136,7 +136,9 @@ Flatpak applications can be easily managed and downgraded in Warehouse.
 
 Autologin will be broken when rolling back from Bazzite Deck 44 to Bazzite Deck 43.
 
-To fix this, simply delete `zz-steamos` and `zz-bazzite` under `/etc/sddm.conf.d/`
+To fix this, simply delete any files prefixed with `zz-` under `/etc/sddm.conf.d/`
+
+!!! tip "These typically include the following: `zz-steamos`, `zz-bazzite`, `zz-holo-autologin.conf`, `zz-bazzite-autologin.conf` and `zz-steamos-autologin.conf`"
 
 > Read more about Bazzite Deck 44 [here](https://universal-blue.discourse.group/t/bazzites-biggest-update-deck-44-has-launched-happy-birthday-to-universal-blue/12373). You may report any relevant regressions under [this Discord support thread](https://discord.com/channels/1072614816579063828/1539396706712555712).
 

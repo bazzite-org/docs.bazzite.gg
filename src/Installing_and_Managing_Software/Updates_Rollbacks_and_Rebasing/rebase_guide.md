@@ -238,7 +238,7 @@ You may view the list of available stable builds by using the following methods:
 
 ### Rebasing to a Specific Build
 
-Rebasing to a specific build is as simple as using a **TAG** with a format of `VERSION-YEARMONTHDAY`
+Rebasing to a specific build is as simple as using a **TAG** with a format of `BRANCH-VERSION.YEARMONTHDAY`
 
 === "Bazzite Rollback Helper"
 
@@ -249,11 +249,18 @@ Rebasing to a specific build is as simple as using a **TAG** with a format of `V
     !!! example
         
         Rebasing to `bazzite-deck`'s (_Fedora 39_) build on **13th January, 2024**:
+        
         ```bash
-        brh rebase bazzite-deck:39-20240113
+        brh rebase bazzite-deck:stable-39.20240113
         ```
 
         <small>_(Please note that this build is no longer available since it is past the 90 day limit and is only used as an example for this documentation.)_</small>
+        
+        Rebasing to `bazzite-deck`'s newest Fedora 43 build, if you are already on `bazzite-deck`:
+        
+        ```bash
+        brh rebase stable-43
+        ```
 
 === "Backend Commands"
 

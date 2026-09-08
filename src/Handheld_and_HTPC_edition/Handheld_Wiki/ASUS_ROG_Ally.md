@@ -26,7 +26,12 @@ title: ASUS Handhelds
 - Changing A/C power sometimes leads to a stuck TDP.
   - This happens when removing the charger while in standby.
   - Attaching and removing the charger while not in standby is a workaround.
-- Some users report that the mic sounds garbled
+- Audio is Soft
+  - There are two audio devices that appear on the Rog Ally:
+    - **Family 17h/19h/1ah HD Audio Controller**
+    - **ROG Ally**
+  - Both affect each other's audio volume, so they must be at the same volume level.
+- Mic sounds garbled
   - Set the mic/input volume to 10%-15% in settings may resolve this issue
   - The input profile in Discord Settings may also need to be set to **Noice Cancellation**.
 - The "Auto UMA" setting in UEFI/BIOS may cause crashes in some games.
@@ -36,13 +41,14 @@ title: ASUS Handhelds
   - This issue may also be present during charging and sleeping.
 - The Ally does **not** support button holding for the Steam or QAM buttons.
   - Steam Input's chords may not work by default.
-    - Swapping the Start/Select button(s) can be used as a workaround.
+  - Swapping the Start/Select button(s) can be used as a workaround.
 - Suspend may be broken if SMT is disabled
 - Fingerprint sensor driver may not work.
 - Storage may show duplicate drives.
   - This is a visual bug, do **not** attempt to format this drive!
 - Turning on the wake animation when resuming from sleep may cause the device to act erratically.
   - Steam's top and bottom panels may be missing when this bug triggers.
+
 
 #### CPU Boost?
 

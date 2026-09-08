@@ -1,8 +1,10 @@
 ---
-title: Handheld Compatibility
+title: Handheld Wiki
 ---
 
-# Handheld Compatibility
+# Handheld Wiki
+
+> This is a more general guide. For troubleshooting, see [Steam Gaming Mode Quirks](/Handheld_and_HTPC_edition/quirks.md).
 
 ## SteamOS-like Functionality
 
@@ -39,7 +41,7 @@ _Click the name of each hardware to view post-installation setup, known working 
 
 There are a few options for TDP Controls that work with Bazzite:
 
-!!! info "If you open OpenGamepadUI and see the message `Waiting for PowerStation service...`, this means your device does not use PowerStation for TDP. This is completely normal and can be safely ignored."
+!!! info "If you open OpenGamepadUI and see the message `TDP managed by Steam`, this means your device's TDP is in fact managed by Steam."
 
 !!! tip "If detailed TDP configurations cannot be found, try selecting the **Performance** profile → scroll down and enable TDP and GPU Clocks. This should enable detailed TDP configuration in Watts."
 
@@ -84,13 +86,16 @@ The button to open OGUI varies on a device-by-device basis. <small>_We tried our
 
 | Device | Graphic | Button Name | Action |
 | :-: | :-: | :- | :- |
-| ROG Ally series | :material-microsoft-dynamics-365:/:simple-nucleo:/:material-bookshelf: | Armory Crate Button | Long press |
+| ROG Ally series | :material-microsoft-dynamics-365:/:simple-nucleo: | Armory Crate Button | Long press |
+| Xbox Ally series | :material-bookshelf:/<kbd>\|\|\\</kbd> | Library Button | Long press |
 | MSI | :simple-wattpad: | Center M Button |  Long press |
-| Ayaneo | **. . .** | RC Button | press |
+| Ayaneo | **. . .** | RC Button | Press |
 | OneXPlayer | :simple-atlasos: | Guide Button | Hold Guide and press QAM |
 | Other Devices | :material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-right: | Guide + B | Single press |
 
 !!! note "OGUI is currently selectively enabled for devices in an allowlist and is not currently intended to be used with HTPC setups. If you have a handheld on which OGUI is not appearing, please open an issue on Github!"
+
+!!! tip ":material-microsoft-xbox:/:material-sony-playstation:/:material-steam: + :material-gamepad-circle-right: (Guide + B) is always a fallback that can be used"
 
 > Instructions for enabling OGUI on unsupported devices are available [here](./Other_Handhelds/#enabling-ogui-on-unsupported-devices). Enable **at your own risk**.
 
@@ -102,7 +107,8 @@ The button to open OGUI varies on a device-by-device basis. <small>_We tried our
 
 | Device | Graphic | Button Name | Action |
 | :-: | :-: | :- | :- |
-| ROG Ally series | :material-microsoft-dynamics-365:/:simple-nucleo:/:material-bookshelf: | Armory Crate Button | Single press |
+| ROG Ally series | :material-microsoft-dynamics-365:/:simple-nucleo: | Armory Crate Button | Single press |
+| Xbox Ally series | :material-bookshelf:/<kbd>\|\|\\</kbd> | Library Button | Single press |
 | Legion Go series | :material-tune-variant: | Legion Right Button | Single press |
 | MSI | :simple-wattpad: | Center M Button | Single press |
 | Ayaneo | _**//**_ | = Custom Function Key | Single press |
