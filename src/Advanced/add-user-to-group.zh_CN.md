@@ -6,19 +6,19 @@ title: 将用户添加到组
 
 ## 前言
 
-[Users and Groups](https://wiki.archlinux.org/title/Users_and_groups) are used on Linux for access control, that is, to control access to the system's files, directories, and peripherals, and is cruicial to how Linux works.
+[用户和组](https://wiki.archlinuxcn.org/wiki/Users_and_groups) 是 Linux 上控制访问权限的两个层级。其配置关系到整个系统文件和设备等各方面的操作，因此十分重要。
 
-!!! note "The following docs should also be applicable to other Fedora Atomic systems."
+!!! note "以下指南对其他基于 Fedora Atomic 的系统也基本适用。"
 
 ---
 
-## Adding User to a Group on Atomic Systems
+## 在 Atomic 系统下将用户添加到组
 
-[Bazzite is based on Fedora Atomic](/General/Fedora_Atomic_Comparison/#comparison-of-bazzite-upstream-fedora-atomic-desktop), and Atomic systems use a slightly different way of managing Users & Groups. Therefore, `usermod` cannot be used directly. The following details steps to add your user to a particular group.
+[Bazzite 基于 Fedora Atomic](/General/Fedora_Atomic_Comparison/#comparison-of-bazzite-upstream-fedora-atomic-desktop)，因此用户和组的配置方式与传统发行版略有不同，这导致单纯使用`usermod`通常不足以完成必要的配置。以下将给出完整的将用户添加到任意组的指南。
 
-!!! warning "Follow this guide at your own discretion because you can **break** your system attempting any of this."
+!!! warning "以下指南涉及对系统底层配置的修改，请务必小心。"
 
-!!! info "If you only need to add your user to the input group for controller compatibility purposes, use the automated script at **Bazzite Portal → Tweak System → Add input to your user groups**."
+!!! info "如果你只是需要将用户添加到`input`组来解决一些游戏控制器兼容性相关的问题，建议使用**Bazzite Portal → Tweak System → Add input to your user groups**这一快捷命令。"
 
 ---
 
@@ -30,15 +30,15 @@ title: 将用户添加到组
 sudo cp /etc/group /etc/group.bak
 ```
 
-This copies your current group file to a file called `group.bak`. Additionally, it may prove to be helpful later on if you view and write down the current contents in `/etc/group`.
+这会把你当前的`/etc/group`文件复制到`group.bak`。除此之外，也建议你查看并手动记录当前`/etc/group`的内容，这样出现问题时会更方便修复。
 
 ---
 
-#### 2. Copy Group ID from `/usr/`
+#### 2. 从`/usr/`复制预先定义的组 ID
 
-The Group ID then needs to be identified and copied. It can be found for any known group by running the following command:
+接下来，应确定要修改的组的 ID 以准备复制。对于预定义的组，以下命令可以提取出已经配置好的组 ID：
 
-!!! tip "Remember to replace `<your_group_name>` with the actual group name."
+!!! tip "`<your_group_name>`必须替换成你实际需要的组的名称。"
 
 ```bash
 grep "<your_group_name>" /usr/lib/group
@@ -46,25 +46,25 @@ grep "<your_group_name>" /usr/lib/group
 
 !!! example
 
-    For example, the entry for the `dialout` group is `dialout:x:18`:
+    对于`dialout`组，得到的结果应该是`dialout:x:18`：
 
     ```bash
     grep "dialout" /usr/lib/group
     ```
-    returns
+    预期输出：
     ```console
     dialout:x:18
     ```
 
-!!! info "`/lib/` is a symlink to `/usr/lib/`."
+!!! info "`/lib/`是指向`/usr/lib/`的符号链接。"
 
 ---
 
-#### 3. Write Group ID to Group File
+#### 3. 将所需的组 ID 写入到`/etc/group`
 
-This Group ID needs to be written into the working copy at `/etc/group`. This can be done by appending the entry manually to the `/etc/group` file, or via this one liner:
+接下来需要将找到的组的条目写入到`/etc/group`。你可以手动添加，也可以通过以下命令快速导入：
 
-!!! tip "Remember to replace `<your_group_name>` with the actual group name."
+!!! tip "`<your_group_name>`必须替换成你实际需要的组的名称。"
 
 ```bash
 grep "<your_group_name>" /usr/lib/group | sudo tee -a /etc/group
@@ -76,15 +76,15 @@ grep "<your_group_name>" /usr/lib/group | sudo tee -a /etc/group
     grep "dialout" /usr/lib/group | sudo tee -a /etc/group
     ```
 
-!!! warning "Do **NOT** <small>_try to be smart and_</small> use bash's `>` or `>>` operator in this case. `>` overwrites the file, and both only work in a root shell. Follow the instructions."
+!!! warning "Bash 的`>`或`>>`操作符在此处**无法生效**，且`>`会完全覆盖文件的原有内容。建议严格按照此处给出的命令输入。"
 
 ---
 
-#### 4. Use `usermod`
+#### 4. 使用`usermod`命令
 
-We can then add the user to group with the following command:
+接下来，用以下命令将用户添加到组：
 
-!!! tip "Remember to replace `<your_group_name>` with the actual group name, and `<username>` with your username."
+!!! tip "`<your_group_name>`应对应实际的组名，`<username>`对应你的用户名。"
 
 ```bash
 sudo usermod -aG <your_group_name> <username>
@@ -99,7 +99,7 @@ sudo usermod -aG <your_group_name> <username>
 
 #### 5. 检查无误后重启
 
-修改完成后，务必再次查看`/etc/group`文件，确定以下三条条目都在：
+修改完成后，务必再次查看`/etc/group`文件，确定以下三条都在：
 
 !!! tip "`<your_group_name>`应对应实际的组名，`<username>`对应你的用户名，`<group_ID>`对应组ID。"
 
@@ -116,7 +116,7 @@ sudo usermod -aG <your_group_name> <username>
 ## 配置出错后的修复
 <small>_diannaobaozhale_</small>
 
-如果你意外删除了 `/etc/group` 或写入了错误的配置，可能会出现一种意外情况：你可以正常达到图形界面，但以下功能无法使用：
+如果你意外删除了 `/etc/group` 或写入了错误的配置，可能会出现一种意外情况：你可以正常使用图形界面，但以下功能无法使用：
 
 *   重启后的用户登录
 *   Polkit 审核
@@ -124,44 +124,44 @@ sudo usermod -aG <your_group_name> <username>
 
 此时你将无法直接修复 `/etc/group`，因为这需要 Polkit 或者 `sudo` 提供批准。
 
-To fix this, the file needs to be edited in a root shell before the system arrives at a graphical session.
+为了修复该问题，需要在进入图形界面之前先行启动一个 Root Shell。
 
 ---
 
-#### 1. Reboot into GRUB Command Editor
+#### 1. 重新启动到 GRUB 菜单
 
-Reboot your device and tap <kbd>Esc</kbd> on the keyboard to reach the GRUB boot menu. If you have not hidden your GRUB menu, you may also tap <kbd>↓</kbd> continuously until the GRUB menu appears.
+重新启动设备，并在开机过程中按<kbd>Esc</kbd>键以进入 GRUB 菜单。对于双系统或没有隐藏 GRUB 菜单的配置，也可以在菜单出现时按<kbd>↓</kbd>以打断自动的倒计时。
 
 !!! tip
 
-    *   If you press <kbd>Esc</kbd> too many times, you may end up at a `grub>` prompt.
-    *   Return to the boot menu by typing `exit` and pressing <kbd>Enter</kbd>.
+    *   如果按<kbd>Esc</kbd>的次数太多，你可能会看到一个`grub>`的 Shell 界面；
+    *   此时应输入`exit`并按<kbd>Enter</kbd>，以回到 GRUB 的主要菜单。
 
-![Edit the command for the latest boot entry|690x351,75%](../img/Edit_the_command_for_the_latest_boot_entry.png)
-
----
-
-#### 2. Edit the Boot Command Temporarily
-
-Edit the last deployment by pressing <kbd>E</kbd> on your keyboard.
-
-![Boot with init=/bin/bash|689x359,75%](../img/Boot_with_init_bin_bash.jpeg)
-
-Append `init=/bin/bash` to the line beginning with `linux`.
-
-![Reboot|689x359,75%](../img/Reset_Password_Reboot.jpeg)
-
-Continue the boot process with <kbd>Ctrl</kbd>+<kbd>X</kbd>.
+![为最新的启动菜单项修改命令|690x351,75%](../img/Edit_the_command_for_the_latest_boot_entry.png)
 
 ---
 
-#### 3. Fix `/etc/group`
+#### 2. 临时修改启动命令
 
-Once the boot process completes, the system will drop you to a **root shell**.
+选择最新的部署，按<kbd>E</kbd>以进行临时的启动命令修改。
 
-View and edit your `/etc/group` with any CLI text editor, such as `vim` or `nano`. It should contain the following:
+![使用 init=/bin/bash 命令启动|689x359,75%](../img/Boot_with_init_bin_bash.jpeg)
 
-!!! tip "Replace `<username>` with your username. If you hadn't set it during installation, it would be set to a default of `bazzite`."
+在`linux`开头的一行的末尾，输入`init=/bin/bash`。
+
+![重新启动|689x359,75%](../img/Reset_Password_Reboot.jpeg)
+
+按<kbd>Ctrl</kbd>+<kbd>X</kbd>以使用新命令启动。
+
+---
+
+#### 3. 修复`/etc/group`
+
+如果启动配置修改正确，你应该会进入一个 **root** 权限的 Shell，绕过`sudo`等限制。
+
+用你习惯的命令行文本编辑器，比如`vim`或`nano`来修改`/etc/group`，确保其至少包含以下内容：
+
+!!! tip "`<username>`必须对应修改为你实际使用的用户名。如果你在安装 Bazzite 时没有手动配置，则应使用默认的`bazzite`。"
 
 *   `wheel:x:10:<username>`
 *   `<username>:x:1000`
@@ -173,32 +173,32 @@ View and edit your `/etc/group` with any CLI text editor, such as `vim` or `nano
     wheel:x:10:bazzite
     bazzite:x:1000
     ```
-!!! note "If you have previously backed up your `/etc/group` file, you can copy it back with `cp /etc/group.bak /etc/group`"
+!!! note "如果你有出现问题之前的`/etc/group`备份，则可以使用`cp /etc/group.bak /etc/group`命令以进行还原。"
 
 ---
 
-#### 4. Add User to `wheel` Group
+#### 4. 将用户添加到`wheel`组
 
-After fixing `/etc/group`, SELinux needs to be temporarily loaded to add the user back to the group properly. Run the following commands:
+修改好`/etc/group`之后，为了将你的用户正确加入`wheel`组，必须暂时加载系统的 SELinux 策略。
 
-Mount SELinux
+挂载 SELinux
 ```bash
 mount -t selinuxfs selinuxfs /sys/fs/selinux
 ```
-Load SELinux Policy
+加载 SELinux 策略
 ```bash
 /sbin/load_policy
 ```
-Add user to `wheel` Group
-!!! tip "Replace `<username>` with your username. If you hadn't set it during installation, it would be set to a default of `bazzite`."
+将用户添加到`wheel`组
+!!! tip "`<username>`必须对应修改为你实际使用的用户名。如果你在安装 Bazzite 时没有手动配置，则应使用默认的`bazzite`。"
 ```bash
 /sbin/usermod -aG wheel <username>
 ```
-Sync configurations
+同步 I/O
 ```bash
 sync
 ```
-Reboot
+重新启动
 ```bash
 /sbin/reboot -ff
 ```

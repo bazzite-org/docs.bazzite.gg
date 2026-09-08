@@ -41,9 +41,9 @@ title: 游戏与硬件兼容性
 - [**Steam**](https://store.steampowered.com/) 账号
   - 如果目前没有账号，也可以在安装完成后在系统开机时注册
 
-### Compatible Handhelds
+### 兼容的掌机
 
-The [**Handheld Wiki**](../Handheld_and_HTPC_edition/Handheld_Wiki/index.md) lists tested handhelds with proper support, including the Steam Deck, ASUS ROG Ally, Lenovo Legion Go, and a handful of other handhelds.
+[**Handheld Wiki**](../Handheld_and_HTPC_edition/Handheld_Wiki/index.md) 列出了进行了测试且支持的的掌机型号，包括了 Steam Deck、ASUS ROG Ally、Lenovo Legion Go 等。
 
 <hr>
 
@@ -93,33 +93,33 @@ PROTON_USE_WINED3D=1 %command%
 
 !!! warning "格式化一个分区会清除上面的所有数据，且无法撤销。"
 
-### Unsupported Filesystems for Secondary Drives
+### 外接硬盘上不支持的文件系统
 
 !!! warning
 
-    NTFS and exFAT/FAT32 are NOT SUPPORTED. These filesystems can and will eventually lead to DATA CORRUPTION under Linux, and/or does not support the features needed for Proton/WINE. Do NOT use them!
-    WinBTRFS still have BUGS, and the file permission/ownership system on Windows is very different to that of Linux, with no guarantee that you won't run into issues and/or data loss later down the road.
+    NTFS 和 exFAT/FAT32 **不受支持**。这些文件系统在 Linux 上长期使用**一定**会导致无法在 Linux 上修复的数据损坏，且无法支持 Proton/WINE 需要的一些文件系统功能。不要将游戏安装在这些文件系统上！
+    WinBTRFS 也并非完美，且由于 Windows 和 Linux 在文件权限管理上的重大差异，无法保证数据的安全性。
     
-    All of this means that there is Unfortunately no reliable cross-platform filesystem that can be shared between Windows and Linux.
+    换句话说，目前并不存在一个足够可靠的，能同时用于 Windows 和 Linux 的文件系统。
 
 !!! warning "格式化一个分区会清除上面的所有数据，且无法撤销。"
     
 !!! info
     
-    To disable the NTFS nag, run `ujust _disable-ntfs-service`. **ONLY DO THIS IF YOU KNOW WHAT YOU ARE DOING. THIS WILL NOT PREVENT DATA LOSS, ONLY DISABLE THE WARNING.**
+    使用`ujust _disable-ntfs-service`命令隐藏 NTFS 挂载时的警告。**这并不能阻止数据损坏，只是隐藏提示信息。**
 
 
 #### NTFS
 
-If you are coming from Windows and plan to game on a secondary drive with games already installed on it, then we regret to inform you that the NTFS filesystem is **unsupported** for PC gaming on Bazzite.
+如果你先前使用的是 Windows 并且有在 Windows 下配置的安装了游戏的外接硬盘， If you are coming from Windows and plan to game on a secondary drive with games already installed on it, then we regret to inform you that the NTFS filesystem is **unsupported** for PC gaming on Bazzite.
 
 Playing games off of NTFS causes various issues, including but not limited to **games not launching at all**, and will eventually result in **data corruption** and **permanent data loss**!
 
 #### exFAT 和 FAT32
 
-FAT32 and exFAT are **unsupported**. Both filesystems **do not support symbolic links** which is required for Proton prefixes to work properly.  However, there are scenarios where a microSD card is formatted to exFAT _may work_ in some cases, but this method is unsupported as something the Bazzite maintainers do not plan to accommodate.
+FAT32 和 exFAT 都**不受支持**。两者都 **不支持符号链接**，因此 Proton Prefix 无法正常工作。不过，有些情况下可能会将一块 MicroSD 卡格式化成 exFAT 用于数据存储。这种做法有其意义，但 Bazzite 不计划提供支持。
 
-Additionally, the FAT family of filesystems are not [Journaling file systems](https://en.wikipedia.org/wiki/Journaling_file_system). This means data loss or corruption on FAT is more likely to happen, with recovery being much, much harder. Therefore, Bazzite also advises to avoid storing important data without backups on FAT filesystems.
+除此之外，FAT 体系的文件系统都不是 [日志式](https://en.wikipedia.org/wiki/Journaling_file_system)，因此出现数据损坏时将更难恢复。 Bazzite 不建议将重要数据保存在 FAT 文件系统中。
 
 ### 和双启动的 Windows 共用游戏库
 

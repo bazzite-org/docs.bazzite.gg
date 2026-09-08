@@ -8,7 +8,7 @@
 
     此处的步骤涉及非常底层的系统更改，请务必小心。
 
-![Edit the command for the latest boot entry|690x351](../img/Edit_the_command_for_the_latest_boot_entry.png)
+![为最新的启动菜单项修改命令|690x351,75%](../img/Edit_the_command_for_the_latest_boot_entry.png)
 
 1. 重启设备。
 2. 如果 GRUB 不默认显示，开机时按 <kbd>Esc</kbd> 键进入 GRUB 菜单。
@@ -16,11 +16,11 @@
    b. 此时输入 `exit` 并按 <kbd>Enter</kbd> 以回到 GRUB 主菜单。
 3. 通过上下键选择最新版本的部署（通常为`ostree:0`），按 <kbd>E</kbd>以进入编辑模式。
 
-![Boot with init=/bin/bash|689x359](../img/Boot_with_init_bin_bash.jpeg)
+![使用 init=/bin/bash 命令启动|689x359,75%](../img/Boot_with_init_bin_bash.jpeg)
 
 在自定义命令的界面中，找到 `linux` 开头的一行，在最后输入 `init=/bin/bash`。
 
-![Reboot|689x359](../img/Reset_Password_Reboot.jpeg)
+![重新启动|689x359,75%](../img/Reset_Password_Reboot.jpeg)
 
 按 <kbd>Ctrl</kbd>+<kbd>X</kbd> 以按当前命令启动。
 

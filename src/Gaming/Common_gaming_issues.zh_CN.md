@@ -85,7 +85,7 @@ ProtonDB 上经常有用户建议将启动选项设定为`gamemoderun %command%`
 -   GameMode 在较新硬件上带来的性能提升非常有限；
 -   有些极端情况下甚至会导致性能损失。
 
-It might work if you layer the `gamemode` package, but this is **NOT** supported.
+你也许可以通过`rpm-ostree`安装`gamemode`包以提供该命令，但 Bazzite **无法提供相关支持**。
 
 ### NTFS 文件系统下的权限问题
 
