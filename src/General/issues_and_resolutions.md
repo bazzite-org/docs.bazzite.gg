@@ -324,11 +324,11 @@ You will need to manually add your user to the **`usershares`** group.
 
 === "KDE Plasma"
 
-    Open **System Settings → Colors and Themes → Login Screen**. On that screen, tick **"Automatically log in"**, select your user and for the session, select **"Plasma"** and don't forget to to click on the **"Apply"** button.
+    Open **System Settings → Security and Privacy → Login Screen**. On that screen, tick **"Automatically log in"**, select your user and for the session, select **"Plasma"** and don't forget to to click on the **"Apply"** button.
 
 === "GNOME"
 
-    Open the **Settings application → Users**. Click the **Unlock** button in the top right corner. Then switch on **Automatic Login**.
+    Open the **Settings application → System → Users**. Click the **Unlock** button in the top right corner. Then switch on **Automatic Login**.
 
 ---
 
