@@ -202,4 +202,4 @@ Universal Blue 旗下还有两个和 Bazzite 同源但不主要面向游戏的�
 
     在提出新问题之前，建议先根据问题相关的关键词再次搜索 Bazzite 文档。
 
-欢迎在[Bazzite 的 GitHub 仓库](https://github.com/ublue-os/bazzite/issues)中氵 issue。不过需要注意的是，有些问题往往不在 Bazzite 团队的能力范围内，比如 NVIDIA 驱动问题、特定游戏的兼容性，或一些整个桌面级 Linux 的大环境问题。
+欢迎在 [Bazzite 的 GitHub 仓库](https://github.com/ublue-os/bazzite/issues)中氵 issue。不过需要注意的是，有些问题往往不在 Bazzite 团队的能力范围内，比如 NVIDIA 驱动问题、特定游戏的兼容性，或一些整个桌面级 Linux 都有的大环境问题。
