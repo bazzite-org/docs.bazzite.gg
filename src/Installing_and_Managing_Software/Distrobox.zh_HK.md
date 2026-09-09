@@ -1,27 +1,27 @@
 ---
-title: Distrobox Containers
+title: Distrobox 容器
 ---
 
-# Distrobox Containers
+# Distrobox 容器
 
 ![distrobox|510x413](../img/distrobox.png)
 
-## Basic Usage
+## 基本操作
 
-Run other minimal variants of popular Linux distributions in Bazzite inside of a container and access each distribution's packages without any of their dependencies and libraries affecting the host machine.
+在 Bazzite 上透過 Distrobox 容器運行其他 Linux 發行版，能在不會影響 Bazzite 系統本身的情況下使用其他包管理器和軟件源。
 
-- Containers are **not** virtual machines.
-- Containers are intended to be **disposable** and may run into issues where they need to be recreated.
-- Using this method to obtain software **requires knowledge of how traditional Linux operating systems install packages**.
-  - Create a test container to familiarize yourself with basic Linux commands before diving in further.
+- 容器**不是**虛擬機
+- 容器為可輕易拋棄及重建的
+- 使用包管理器需要對傳統 Linux 系統管理有一定的認知
+  - 你可以先創建一個測試容器去嘗試試鹹淡
 
-Distrobox containers run sub-systems of other popular [Linux distributions](https://distrobox.it/compatibility/#containers-distros) with access to their package managers (`apt`, `dnf`, `pacman`, etc.) and their package formats (`.deb`/`.rpm`) and any additional repositories like the [AUR](https://aur.archlinux.org/). Distrobox containers can be used for both **development environments** and **installing applications that are not available in any of the other installation methods** which can be exclusive to specific package managers.
+Distrobox 容器基於運行其他 [Linux 發行版](https://distrobox.it/compatibility/#containers-distros)的子系統而運作。 你可以將一個容器作為開發環境或是安裝軟件的工具使用。
 
 ---
 
-### **Linux Distribution Examples**
+### **Linux 發行版例子**
 
-!!! warning "Be wary of installing software from community repositories such as the AUR, COPR, and PPA. Anyone can host packages there and packages will be of varying qualities."
+!!! warning "請小心並批判性地安裝在社區包源如 AUR、COPR、與PPA上的軟件包。任何人都可以註冊並在這些包源上發行軟件，因而其質量及安全性參差不齊。"
 
 | OS                                  | Package Manager    | Search for Packages                                                       |
 | ----------------------------------- | ------------------ | ------------------------------------------------------------------------- |
@@ -34,7 +34,7 @@ Distrobox containers run sub-systems of other popular [Linux distributions](http
 
 ---
 
-#### Arch Linux Distrobox Container Example
+#### Arch Linux Distrobox 容器例子
 
 ![i use arch btw|1022x822, 75%](../img/i_use_arch_btw.png)
 
@@ -42,21 +42,22 @@ Distrobox containers run sub-systems of other popular [Linux distributions](http
 
 ---
 
-## Distrobox Graphical Interface
+## Distrobox 圖形界面
 
 ![Distroshelf|970x752, 75%](../img/distroshelf_fixedcrop.png)
 
-Distrobox containers can be created and managed graphically with [**DistroShelf**(GNOME)](https://github.com/ranfdev/DistroShelf) or [**Kontainer**(KDE Plasma)](https://github.com/DenysMb/Kontainer) which are pre-installed. You may also install them through [Bazaar](/Installing_and_Managing_Software/Flatpak.md).
+Distrobox containers can be created and managed graphically with [**DistroShelf**](https://github.com/ranfdev/DistroShelf) which is pre-installed.
+你可以透過預安裝的 [**DistroShelf**(GNOME)](https://github.com/ranfdev/DistroShelf) 或 [**Kontainer**(KDE Plasma)](https://github.com/DenysMb/Kontainer) 創建及管理 Distrobox 容器。此外，你亦可如 Bazaar 應用商店中安裝它們。
 
 ---
 
-## Command Line Usage
+## 命令行指令
 
-Distroboxes can be managed and integrated through various GUI apps. Nevertheless, you may still interact with Distrobox through the command line.
+你可於各種提供圖形介面的程式中創建及管理 Distrobox。當然，你亦可透過命令行指令進行更輕量化的管理和設置。
 
 ---
 
-### Desktop Integration
+### 桌面集成功能
 
 Applications with a graphical user interface can integrate with your system with an application shortcut by exporting the application using the below command in the container terminal window:
 
@@ -69,9 +70,7 @@ To "un-export" the app, enter the command below in the container terminal window
 distrobox-export --delete --app <package>
 ```
 
----
-
-### Manually Create Pre-Configured Distrobox Containers
+## Manually Create Pre-Configured Distrobox Containers
 
 ```command
 ujust distrobox-assemble
@@ -89,7 +88,7 @@ Swap between different containers in your host with the terminal or alternativel
 distrobox enter <container>
 ```
 
-### Removing Distrobox Containers
+## Removing Distrobox Containers
 
 Delete containers graphically with DistroShelf.
 
